@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets PPE | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
+    <meta name="description" content="Mes projets PPE en BTS SIO SISR : un cluster Proxmox à deux serveurs avec baie SAN en RAID 5 et multipath, et la création de ce portfolio.">
+
+    <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Projets PPE | Mehdi REZZAOUI">
+    <meta property="og:description" content="Mes projets PPE en BTS SIO SISR : un cluster Proxmox à deux serveurs avec baie SAN en RAID 5 et multipath, et la création de ce portfolio.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== En-tête et menu (identique sur toutes les pages) ===== -->
+    <header class="entete" id="haut">
+        <div class="conteneur entete-contenu">
+            <a href="index.html" class="nom-site"><span class="point"></span>Mehdi REZZAOUI</a>
+
+            <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+            <nav class="menu" id="menu" aria-label="Menu principal">
+                <ul class="menu-liste" id="menu-liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="bts-competences.html">BTS et compétences</a></li>
+                    <li><a href="projets-ppe.html" class="actif" aria-current="page">Projets PPE</a></li>
+                    <li><a href="stages.html">Stages</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== Titre de la page ===== -->
+        <section class="titre-page">
+            <div class="conteneur">
+                <h1>Mes projets PPE</h1>
+                <p class="texte-large texte-secondaire">Les projets réalisés en BTS SIO dans le cadre des PPE (projets personnalisés encadrés). Chaque fiche suit le même plan, du contexte jusqu'à mon bilan personnel.</p>
+            </div>
+        </section>
+
+        <!-- ===== Liste des projets avec le filtre par compétence ===== -->
+        <section class="section" id="liste-projets">
+            <div class="conteneur">
+                <h2>Filtrer par compétence</h2>
+
+                <!-- Chaque bouton a une valeur (value) : le JavaScript l'utilise pour filtrer -->
+                <div class="filtres">
+                    <button class="filtre filtre-actif" type="button" value="toutes" aria-pressed="true">Toutes</button>
+                    <button class="filtre" type="button" value="c1" aria-pressed="false">C1</button>
+                    <button class="filtre" type="button" value="c2" aria-pressed="false">C2</button>
+                    <button class="filtre" type="button" value="c3" aria-pressed="false">C3</button>
+                    <button class="filtre" type="button" value="c4" aria-pressed="false">C4</button>
+                    <button class="filtre" type="button" value="c5" aria-pressed="false">C5</button>
+                    <button class="filtre" type="button" value="c6" aria-pressed="false">C6</button>
+                </div>
+
+                <!-- Les classes c1 à c6 de chaque carte indiquent les compétences du projet -->
+                <div class="grille grille-projets">
+                    <article class="carte carte-projet c1 c4 c5">
+                        <h3>Cluster Proxmox avec baie SAN</h3>
+                        <p class="date">PPE de 1re année, 2025-2026, en groupe de 4</p>
+                        <p>Deux serveurs Proxmox VE réunis en cluster, avec un stockage partagé en RAID 5 sur une baie SAN Dell et des accès redondants grâce au multipath.</p>
+                        <p class="liste-etiquettes"><span class="etiquette">C1</span> <span class="etiquette">C4</span> <span class="etiquette">C5</span></p>
+                        <p><a href="#proxmox">Lire la fiche du projet</a></p>
+                    </article>
+                    <article class="carte carte-projet c3 c4 c6">
+                        <h3>Mon portfolio</h3>
+                        <p class="date">PPE de 2e année, 2026-2027, seul</p>
+                        <p>La conception et le développement de ce site, en HTML, CSS et JavaScript sans framework, puis sa mise en ligne sur GitHub Pages.</p>
+                        <p class="liste-etiquettes"><span class="etiquette">C3</span> <span class="etiquette">C4</span> <span class="etiquette">C6</span></p>
+                        <p><a href="#portfolio">Lire la fiche du projet</a></p>
+                    </article>
+                </div>
+
+                <!-- Message affiché par le JavaScript quand aucun projet ne correspond -->
+                <p class="cache texte-secondaire" id="aucun-projet">Aucun projet PPE ne mobilise cette compétence pour l'instant. Elle est illustrée sur la page <a href="stages.html">Stages</a>.</p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Fiche 1 : cluster Proxmox avec baie SAN
+             ===================================================== -->
+        <article class="section fiche" id="proxmox">
+            <div class="conteneur">
+                <p class="etiquette">PPE de 1re année, 2025-2026</p>
+                <h2>Cluster Proxmox à 2 serveurs avec baie SAN</h2>
+
+                <section class="fiche-partie">
+                    <h3>1. Contexte</h3>
+                    <p>Ce projet a été réalisé en 1re année, en groupe de quatre avec Tristan Dos Santos, Muhamed-Ali Unlu et Hamza Doumi. Le besoin était de monter une infrastructure de virtualisation sur du vrai matériel : deux serveurs capables d'héberger des machines virtuelles, avec un stockage commun pour les données.</p>
+                    <p>Environnement technique :</p>
+                    <ul>
+                        <li>2 serveurs physiques</li>
+                        <li>1 baie de stockage SAN Dell PowerVault MD3420</li>
+                        <li>2 switchs réseau</li>
+                        <li>des câbles réseau RJ45 et des câbles SAN</li>
+                    </ul>
+                    <p>Contraintes : le matériel avait déjà servi. La baie contenait encore d'anciennes configurations RAID et un ancien groupe d'hôtes qu'il fallait supprimer. Le temps du PPE était aussi limité.</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>2. Objectifs</h3>
+                    <ul>
+                        <li>Installer physiquement les serveurs, les switchs et la baie SAN.</li>
+                        <li>Installer l'hyperviseur Proxmox VE sur les deux serveurs.</li>
+                        <li>Réunir les deux serveurs dans un cluster.</li>
+                        <li>Fournir aux serveurs un stockage partagé en RAID 5 depuis la baie SAN.</li>
+                        <li>Mettre en place plusieurs chemins d'accès vers la baie (multipath) pour la redondance.</li>
+                    </ul>
+                    <p>La finalité : avoir une infrastructure prête à accueillir des machines virtuelles, qui continue de fonctionner si un disque ou un lien tombe en panne.</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>3. Travail réalisé</h3>
+
+                    <div class="grille">
+                        <div class="carte carte-mise-en-avant">
+                            <h4>Ce que j'ai fait moi-même</h4>
+                            <ul>
+                                <li>L'installation physique de l'infrastructure</li>
+                                <li>L'installation de Proxmox VE sur les deux serveurs</li>
+                                <li>La rédaction de la documentation d'installation</li>
+                            </ul>
+                        </div>
+                        <div class="carte">
+                            <h4>Ce que le groupe a fait ensemble</h4>
+                            <ul>
+                                <li>La création du cluster</li>
+                                <li>La configuration de la baie SAN et des RAID 5</li>
+                                <li>Le multipath et les volumes LVM</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Étape 1 : installation physique <span class="etiquette">Mon travail</span></h4>
+                    <p>J'ai installé les deux serveurs, les deux switchs et la baie SAN dans la baie informatique. J'ai ensuite branché les alimentations, relié les serveurs aux switchs et à la baie SAN, puis rangé les câbles avec un système de cable management.</p>
+
+                    <h4>Étape 2 : installation de Proxmox VE <span class="etiquette">Mon travail</span></h4>
+                    <p>J'ai téléchargé l'image ISO officielle de Proxmox VE et créé une clé USB de démarrage avec Rufus. Sur chaque serveur, j'ai démarré sur la clé depuis le BIOS/UEFI, puis j'ai suivi l'installation graphique : choix du disque système, mot de passe root, nom du serveur et configuration réseau. Après le redémarrage, l'administration se fait depuis l'interface web sur le port 8006. J'ai terminé par les mises à jour :</p>
+                    <pre class="code"><code># Accès à l'interface web d'administration
+https://&lt;adresse-du-serveur&gt;:8006
+
+# Mise à jour du système
+apt update &amp;&amp; apt full-upgrade</code></pre>
+
+                    <h4>Étape 3 : création du cluster <span class="etiquette">Groupe</span></h4>
+                    <p>Le cluster a été créé sur le premier serveur, puis le second serveur l'a rejoint. La commande <code>pvecm status</code> permet de vérifier que les deux serveurs font bien partie du cluster.</p>
+                    <pre class="code"><code># Sur le premier serveur : création du cluster
+pvecm create &lt;nom-du-cluster&gt;
+
+# Sur le second serveur : ajout au cluster
+pvecm add &lt;adresse-du-premier-serveur&gt;
+
+# Vérification de l'état du cluster
+pvecm status</code></pre>
+
+                    <h4>Étape 4 : configuration de la baie SAN <span class="etiquette">Groupe</span></h4>
+                    <p>La baie se configure avec le logiciel Dell PowerVault Modular Disk Storage Manager, installé sur un poste d'administration relié au port de management de la baie. Nous avons supprimé les anciennes configurations, puis créé deux groupes de disques en RAID 5 : un groupe de 5 disques à 10 000 tours par minute et un groupe de 10 disques à 15 000 tours par minute. Le RAID 5 permet de perdre un disque sans perdre de données.</p>
+
+                    <figure class="figure">
+                        <img src="img/proxmox-baie-disques.webp" alt="Vue de face de la baie SAN : à gauche les emplacements vides, au centre le groupe de 5 disques encadré en rouge, à droite le groupe de 10 disques encadré en jaune" width="952" height="202" loading="lazy">
+                        <figcaption>Répartition des disques dans la baie : le groupe 10K en rouge, le groupe 15K en jaune.</figcaption>
+                    </figure>
+
+                    <figure class="figure">
+                        <img src="img/proxmox-raid5.webp" alt="Capture du logiciel Dell PowerVault Modular Disk Storage Manager montrant le groupe de disques RAID5_15k en état optimal, niveau de RAID 5, interface SAS" width="1158" height="819" loading="lazy">
+                        <figcaption>Le groupe de disques RAID5_15k créé dans Modular Disk Storage Manager, en état « Optimal ».</figcaption>
+                    </figure>
+
+                    <p>Nous avons ensuite créé un disque virtuel, puis un groupe d'hôtes contenant les deux serveurs Proxmox, et nous lui avons affecté le LUN 10. Chaque serveur est relié à la baie par deux liens actifs.</p>
+
+                    <h4>Étape 5 : multipath et volumes LVM <span class="etiquette">Groupe</span></h4>
+                    <p>Comme chaque serveur voit la baie par deux chemins, il voit aussi le même disque deux fois. Le multipath regroupe ces chemins en un seul périphérique : si un lien tombe, l'autre prend le relais. Les identifiants des disques (WWID) sont masqués ci-dessous.</p>
+                    <pre class="code"><code># Installation de l'outil
+apt update
+apt install multipath-tools
+
+# Récupération de l'identifiant (WWID) de chaque disque de la baie
+/lib/udev/scsi_id -g -u -d /dev/sda
+/lib/udev/scsi_id -g -u -d /dev/sdd
+
+# Ajout des deux disques au multipath
+multipath -a &lt;WWID-du-volume-10K&gt;
+multipath -a &lt;WWID-du-volume-15K&gt;</code></pre>
+
+                    <p>Dans le fichier <code>/etc/multipath.conf</code>, on donne un nom simple à chaque volume :</p>
+                    <pre class="code"><code>multipaths {
+    multipath {
+        wwid  "&lt;WWID-du-volume-10K&gt;"
+        alias mpath10
+    }
+    multipath {
+        wwid  "&lt;WWID-du-volume-15K&gt;"
+        alias mpath15
+    }
+}</code></pre>
+
+                    <p>On recharge la configuration, on vérifie les chemins, puis on crée les volumes LVM sur les deux périphériques multipath :</p>
+                    <pre class="code"><code># Rechargement de la configuration et vérification des chemins
+multipath -r
+multipath -ll
+
+# Création des volumes physiques et des groupes de volumes LVM
+pvcreate /dev/mapper/mpath10
+vgcreate mpath10vg /dev/mapper/mpath10
+pvcreate /dev/mapper/mpath15
+vgcreate mpath15vg /dev/mapper/mpath15
+
+# Vérification
+pvscan --cache</code></pre>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>4. Outils et technologies utilisés</h3>
+                    <ul class="liste-outils">
+                        <li>Proxmox VE (hyperviseur)</li>
+                        <li>Rufus (clé USB de démarrage)</li>
+                        <li>Dell PowerVault MD3420 (baie SAN)</li>
+                        <li>Dell PowerVault Modular Disk Storage Manager</li>
+                        <li>RAID 5</li>
+                        <li>multipath-tools</li>
+                        <li>LVM</li>
+                        <li>Switchs réseau, STP</li>
+                        <li>Ligne de commande Linux (Debian)</li>
+                    </ul>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>5. Compétences mobilisées</h3>
+                    <ul>
+                        <li><a href="bts-competences.html#c1">C1 Gérer le patrimoine informatique</a> : déploiement des serveurs et de la baie, stockage en RAID 5 et chemins redondants pour assurer la continuité de service.</li>
+                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : travail en groupe de quatre avec une répartition des tâches, et rédaction de la documentation d'installation.</li>
+                        <li><a href="bts-competences.html#c5">C5 Mettre à disposition des utilisateurs un service informatique</a> : mise en service du cluster et du stockage partagé, avec des vérifications à chaque étape (<code>pvecm status</code>, <code>multipath -ll</code>, <code>pvscan</code>).</li>
+                    </ul>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>6. Résultats obtenus</h3>
+                    <ul>
+                        <li>Le cluster Proxmox fonctionne entre les deux serveurs.</li>
+                        <li>La baie SAN est configurée avec deux groupes en RAID 5.</li>
+                        <li>Le stockage partagé est accessible depuis les deux serveurs, avec le multipath.</li>
+                        <li>Une documentation d'installation de 15 pages, que j'ai rédigée, décrit toutes les étapes.</li>
+                    </ul>
+                    <p>Les machines virtuelles n'ont pas pu être déployées pendant le projet, faute de temps. L'infrastructure est prête à les accueillir.</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>7. Bilan personnel</h3>
+                    <p>Ce qui a marché : l'installation physique et l'installation de Proxmox se sont bien passées, et à la fin du projet le cluster et le stockage partagé fonctionnaient.</p>
+                    <p>Ce qui n'a pas marché : nous n'avons pas eu le temps de créer les machines virtuelles, alors que c'était le but final de l'infrastructure.</p>
+                    <p>Nous avons rencontré plusieurs difficultés, que nous avons réglées une par une :</p>
+                    <ul>
+                        <li>Les serveurs et la baie SAN ne communiquaient pas : nous avons réinitialisé les switchs et reconfiguré les ports.</li>
+                        <li>La baie était inaccessible : nous avons changé l'adresse IP du poste d'administration et l'adresse de management de la baie.</li>
+                        <li>La création des RAID donnait des erreurs : nous avons complètement réinitialisé la baie, puis recréé les RAID 5.</li>
+                        <li>Une boucle réseau s'était formée entre les deux switchs : nous avons supprimé le lien redondant qui la provoquait.</li>
+                    </ul>
+                    <p>Ce que j'ai appris : installer un hyperviseur sur un serveur physique, câbler une infrastructure complète, et comprendre comment un cluster, une baie SAN, le RAID 5 et le multipath travaillent ensemble. J'ai aussi appris à documenter chaque étape pour que quelqu'un d'autre puisse refaire l'installation.</p>
+                </section>
+
+                <p><a href="#liste-projets">Retour à la liste des projets</a></p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- ===== Pied de page (identique sur toutes les pages) ===== -->
+    <footer class="pied">
+        <div class="conteneur">
+            <ul class="pied-liens">
+                <li><a href="mailto:rezzaouimehdi@hotmail.com">rezzaouimehdi@hotmail.com</a></li>
+                <li><a href="docs/CV_Mehdi_REZZAOUI.pdf">Télécharger mon CV (PDF)</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+            <p>Mehdi REZZAOUI, portfolio BTS SIO SISR, 2026-2027</p>
+        </div>
+    </footer>
+
+    <!-- Bouton "Retour en haut" : simple lien vers l'en-tête -->
+    <a href="#haut" class="retour-haut" aria-label="Retour en haut de la page">↑</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

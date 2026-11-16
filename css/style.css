@@ -384,6 +384,139 @@ ul {
 }
 
 
+/* ---------- Filtre des projets par compétence ---------- */
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.filtre {
+    background-color: transparent;
+    color: #F5F5F7;
+    border: 1px solid #7C4DFF;
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.filtre:hover {
+    background-color: #24242E;
+}
+
+/* Bouton du filtre sélectionné (classe ajoutée par le JavaScript) */
+.filtre-actif,
+.filtre-actif:hover {
+    background-color: #7C4DFF;
+    color: #FFFFFF;
+}
+
+/* Grille des projets : avec auto-fill, les colonnes vides gardent leur place.
+   Une carte seule après un filtre ne s'étire donc pas sur toute la largeur. */
+.grille-projets {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* Élément masqué par le JavaScript */
+.cache {
+    display: none;
+}
+
+.liste-etiquettes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+
+/* ---------- Fiches projets et missions ---------- */
+
+.fiche {
+    border-top: 1px solid #24242E;
+}
+
+.fiche-partie {
+    margin-top: 2.5rem;
+}
+
+/* Titres des 7 parties de la fiche, avec le trait violet */
+.fiche-partie h3 {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #7C4DFF;
+}
+
+h4 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 2rem 0 0.75rem;
+}
+
+.carte h4 {
+    margin-top: 0;
+}
+
+.fiche h4 .etiquette {
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
+}
+
+/* Blocs de commandes et de code */
+.code {
+    background-color: #15151C;
+    border: 1px solid #24242E;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+code {
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    color: #F5F5F7;
+}
+
+/* Images avec leur légende */
+.figure {
+    margin: 1.5rem 0;
+}
+
+.figure img {
+    display: block;
+    border: 1px solid #24242E;
+    border-radius: 14px;
+}
+
+.figure figcaption {
+    margin-top: 0.5rem;
+    color: #A0A3B1;
+    font-size: 0.95rem;
+}
+
+/* Liste d'outils affichée en pastilles */
+.liste-outils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+}
+
+.liste-outils li {
+    background-color: #15151C;
+    border: 1px solid #24242E;
+    border-radius: 999px;
+    padding: 0.3rem 1rem;
+}
+
+
 /* ---------- Pied de page ---------- */
 
 .pied {
@@ -507,5 +640,10 @@ ul {
 
     .texte-large {
         max-width: 75%;
+    }
+
+    /* Lignes de texte moins longues dans les fiches, plus faciles à lire */
+    .fiche-partie {
+        max-width: 850px;
     }
 }
