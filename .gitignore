@@ -7,3 +7,6 @@ CLAUDE.md
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Captures de contrôle faites pendant le développement
+captures/
