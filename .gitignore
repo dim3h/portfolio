@@ -10,3 +10,6 @@ Thumbs.db
 
 # Captures de contrôle faites pendant le développement
 captures/
+
+# Archives des livraisons (rendues à part, pas dans le dépôt)
+livraisons/
