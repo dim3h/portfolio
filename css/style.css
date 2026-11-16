@@ -300,6 +300,90 @@ ul {
 }
 
 
+/* ---------- Titre des pages intérieures ---------- */
+
+.titre-page {
+    padding: 3rem 0;
+    border-bottom: 1px solid #24242E;
+}
+
+.titre-page h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 0 0 1rem;
+}
+
+
+/* ---------- Étiquettes (C1 à C6, "Mon option") ---------- */
+
+.etiquette {
+    display: inline-block;
+    border: 1px solid #7C4DFF;
+    border-radius: 999px;
+    padding: 0.1rem 0.8rem;
+    color: #A98BFF;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Carte mise en avant avec une bordure violette (mon option SISR) */
+.carte-mise-en-avant {
+    border-color: #7C4DFF;
+}
+
+
+/* ---------- Tableau de synthèse ---------- */
+
+/* Sur mobile, le tableau est plus large que l'écran : il défile dans son conteneur */
+.tableau-defilement {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid #24242E;
+    border-radius: 14px;
+}
+
+.tableau {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #15151C;
+}
+
+.tableau caption {
+    padding: 1rem;
+    text-align: left;
+    color: #A0A3B1;
+    font-size: 0.95rem;
+}
+
+.tableau th,
+.tableau td {
+    padding: 0.6rem 0.5rem;
+    border-top: 1px solid #24242E;
+    text-align: center;
+}
+
+.tableau thead th {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    background-color: #0D0D12;
+}
+
+/* Première colonne : le nom de la réalisation, aligné à gauche */
+.tableau tbody th,
+.tableau .colonne-realisation {
+    width: 40%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.coche {
+    color: #A98BFF;
+    font-size: 1.2rem;
+}
+
+
 /* ---------- Pied de page ---------- */
 
 .pied {
@@ -383,6 +467,20 @@ ul {
 
     .accueil {
         padding: 5rem 0;
+    }
+
+    /* Le tableau tient en entier : plus besoin de l'indication de défilement */
+    .indication-mobile {
+        display: none;
+    }
+
+    .tableau {
+        font-size: 1rem;
+    }
+
+    .tableau th,
+    .tableau td {
+        padding: 0.8rem 1rem;
     }
 
     .pied-liens {
