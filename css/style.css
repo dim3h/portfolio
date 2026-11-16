@@ -500,6 +500,11 @@ code {
     font-size: 0.95rem;
 }
 
+/* Image en hauteur (photo) : on limite sa largeur */
+.figure-etroite {
+    max-width: 360px;
+}
+
 /* Liste d'outils affichée en pastilles */
 .liste-outils {
     display: flex;

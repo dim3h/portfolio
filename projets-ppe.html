@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets PPE | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
-    <meta name="description" content="Mes projets PPE en BTS SIO SISR : un cluster Proxmox à deux serveurs avec baie SAN en RAID 5 et multipath, et la création de ce portfolio.">
+    <meta name="description" content="Mes projets en BTS SIO SISR : un cluster Proxmox à deux serveurs avec une baie SAN en RAID 5 et multipath, puis la conception de ce portfolio.">
 
     <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:title" content="Projets PPE | Mehdi REZZAOUI">
-    <meta property="og:description" content="Mes projets PPE en BTS SIO SISR : un cluster Proxmox à deux serveurs avec baie SAN en RAID 5 et multipath, et la création de ce portfolio.">
+    <meta property="og:description" content="Mes projets en BTS SIO SISR : un cluster Proxmox à deux serveurs avec une baie SAN en RAID 5 et multipath, puis la conception de ce portfolio.">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,7 +41,7 @@
         <section class="titre-page">
             <div class="conteneur">
                 <h1>Mes projets PPE</h1>
-                <p class="texte-large texte-secondaire">Les projets réalisés en BTS SIO dans le cadre des PPE (projets personnalisés encadrés). Chaque fiche suit le même plan, du contexte jusqu'à mon bilan personnel.</p>
+                <p class="texte-large texte-secondaire">Les projets que j'ai réalisés en BTS SIO. Chaque fiche suit le même plan, du contexte jusqu'à mon bilan personnel.</p>
             </div>
         </section>
 
@@ -64,15 +64,15 @@
                 <!-- Les classes c1 à c6 de chaque carte indiquent les compétences du projet -->
                 <div class="grille grille-projets">
                     <article class="carte carte-projet c1 c4 c5">
-                        <h3>Cluster Proxmox avec baie SAN</h3>
-                        <p class="date">PPE de 1re année, 2025-2026, en groupe de 4</p>
-                        <p>Deux serveurs Proxmox VE réunis en cluster, avec un stockage partagé en RAID 5 sur une baie SAN Dell et des accès redondants grâce au multipath.</p>
+                        <h3>Monter un cluster Proxmox avec une baie SAN</h3>
+                        <p class="date">PPE de 1re année, de mars à mai 2026</p>
+                        <p>Projet réalisé en équipe de quatre étudiants : deux serveurs Proxmox VE réunis en cluster, avec un stockage partagé en RAID 5 sur une baie SAN et le multipath.</p>
                         <p class="liste-etiquettes"><span class="etiquette">C1</span> <span class="etiquette">C4</span> <span class="etiquette">C5</span></p>
                         <p><a href="#proxmox">Lire la fiche du projet</a></p>
                     </article>
                     <article class="carte carte-projet c3 c4 c6">
                         <h3>Mon portfolio</h3>
-                        <p class="date">PPE de 2e année, 2026-2027, seul</p>
+                        <p class="date">Projet de 2e année, 2026-2027, seul</p>
                         <p>La conception et le développement de ce site, en HTML, CSS et JavaScript sans framework, puis sa mise en ligne sur GitHub Pages.</p>
                         <p class="liste-etiquettes"><span class="etiquette">C3</span> <span class="etiquette">C4</span> <span class="etiquette">C6</span></p>
                         <p><a href="#portfolio">Lire la fiche du projet</a></p>
@@ -89,31 +89,25 @@
              ===================================================== -->
         <article class="section fiche" id="proxmox">
             <div class="conteneur">
-                <p class="etiquette">PPE de 1re année, 2025-2026</p>
-                <h2>Cluster Proxmox à 2 serveurs avec baie SAN</h2>
+                <p class="etiquette">PPE de 1re année, mars à mai 2026</p>
+                <h2>Monter un cluster Proxmox avec une baie SAN</h2>
 
                 <section class="fiche-partie">
                     <h3>1. Contexte</h3>
-                    <p>Ce projet a été réalisé en 1re année, en groupe de quatre avec Tristan Dos Santos, Muhamed-Ali Unlu et Hamza Doumi. Le besoin était de monter une infrastructure de virtualisation sur du vrai matériel : deux serveurs capables d'héberger des machines virtuelles, avec un stockage commun pour les données.</p>
-                    <p>Environnement technique :</p>
+                    <p>Ce projet nous a été donné comme sujet de PPE par notre enseignant, pour nous faire pratiquer la virtualisation et le stockage partagé. Je l'ai réalisé en équipe avec trois autres étudiants de BTS SIO, Muhamed-Ali Unlu, Hamza Doumi et Tristan Dos Santos, de mars à mai 2026.</p>
+                    <p>Nous avions à notre disposition :</p>
                     <ul>
-                        <li>2 serveurs physiques</li>
-                        <li>1 baie de stockage SAN Dell PowerVault MD3420</li>
-                        <li>2 switchs réseau</li>
-                        <li>des câbles réseau RJ45 et des câbles SAN</li>
+                        <li>deux serveurs physiques</li>
+                        <li>une baie de stockage SAN Dell PowerVault MD3420</li>
+                        <li>deux switches</li>
+                        <li>une baie de brassage, avec des câbles réseau RJ45 et des câbles SAN</li>
                     </ul>
-                    <p>Contraintes : le matériel avait déjà servi. La baie contenait encore d'anciennes configurations RAID et un ancien groupe d'hôtes qu'il fallait supprimer. Le temps du PPE était aussi limité.</p>
+                    <p>Notre principale contrainte était le temps. Le matériel avait aussi déjà servi : la baie SAN contenait encore d'anciennes configurations qu'il a fallu supprimer.</p>
                 </section>
 
                 <section class="fiche-partie">
                     <h3>2. Objectifs</h3>
-                    <ul>
-                        <li>Installer physiquement les serveurs, les switchs et la baie SAN.</li>
-                        <li>Installer l'hyperviseur Proxmox VE sur les deux serveurs.</li>
-                        <li>Réunir les deux serveurs dans un cluster.</li>
-                        <li>Fournir aux serveurs un stockage partagé en RAID 5 depuis la baie SAN.</li>
-                        <li>Mettre en place plusieurs chemins d'accès vers la baie (multipath) pour la redondance.</li>
-                    </ul>
+                    <p>Nous devions créer un cluster Proxmox avec les deux serveurs, configurer la baie SAN MD3420 pour qu'elle serve de stockage partagé, et assurer la redondance et la haute disponibilité.</p>
                     <p>La finalité : avoir une infrastructure prête à accueillir des machines virtuelles, qui continue de fonctionner si un disque ou un lien tombe en panne.</p>
                 </section>
 
@@ -122,15 +116,15 @@
 
                     <div class="grille">
                         <div class="carte carte-mise-en-avant">
-                            <h4>Ce que j'ai fait moi-même</h4>
+                            <h4>Mon rôle dans l'équipe</h4>
                             <ul>
                                 <li>L'installation physique de l'infrastructure</li>
                                 <li>L'installation de Proxmox VE sur les deux serveurs</li>
-                                <li>La rédaction de la documentation d'installation</li>
+                                <li>La documentation du projet : je l'ai rédigée avec Tristan (lui pour la baie SAN, moi pour Proxmox), puis je l'ai entièrement mise au propre</li>
                             </ul>
                         </div>
                         <div class="carte">
-                            <h4>Ce que le groupe a fait ensemble</h4>
+                            <h4>Le travail de toute l'équipe</h4>
                             <ul>
                                 <li>La création du cluster</li>
                                 <li>La configuration de la baie SAN et des RAID 5</li>
@@ -139,20 +133,23 @@
                         </div>
                     </div>
 
-                    <h4>Étape 1 : installation physique <span class="etiquette">Mon travail</span></h4>
-                    <p>J'ai installé les deux serveurs, les deux switchs et la baie SAN dans la baie informatique. J'ai ensuite branché les alimentations, relié les serveurs aux switchs et à la baie SAN, puis rangé les câbles avec un système de cable management.</p>
+                    <figure class="figure figure-etroite">
+                        <img src="img/proxmox-baie-brassage.webp" alt="Baie de brassage noire vue de face, avec les deux serveurs en haut, les switches au milieu et la baie SAN en bas, reliés par des câbles réseau et SAN" width="718" height="956" loading="lazy">
+                        <figcaption>La baie de brassage avec les serveurs, les switches et la baie SAN.</figcaption>
+                    </figure>
 
-                    <h4>Étape 2 : installation de Proxmox VE <span class="etiquette">Mon travail</span></h4>
-                    <p>J'ai téléchargé l'image ISO officielle de Proxmox VE et créé une clé USB de démarrage avec Rufus. Sur chaque serveur, j'ai démarré sur la clé depuis le BIOS/UEFI, puis j'ai suivi l'installation graphique : choix du disque système, mot de passe root, nom du serveur et configuration réseau. Après le redémarrage, l'administration se fait depuis l'interface web sur le port 8006. J'ai terminé par les mises à jour :</p>
+                    <h4>Mars : installation physique</h4>
+                    <p>Nous avons préparé le matériel, installé les serveurs et la baie SAN dans la baie de brassage, fait le câblage réseau et le branchement de l'alimentation, connecté les switches, puis rangé les câbles.</p>
+
+                    <h4>Fin mars : installation de Proxmox VE et création du cluster</h4>
+                    <p>Nous avons installé Proxmox VE 9.1 sur les deux serveurs à partir d'une clé USB bootable créée avec Rufus, puis configuré le réseau (adresses IP des serveurs et de leurs interfaces iDRAC) et mis le système à jour. Nous avons ensuite créé le cluster avec la commande <code>pvecm create</code>, ajouté le 2e serveur avec <code>pvecm add</code> et vérifié le résultat avec <code>pvecm status</code>. Les adresses et les noms des serveurs sont masqués ci-dessous.</p>
                     <pre class="code"><code># Accès à l'interface web d'administration
 https://&lt;adresse-du-serveur&gt;:8006
 
 # Mise à jour du système
-apt update &amp;&amp; apt full-upgrade</code></pre>
+apt update &amp;&amp; apt full-upgrade
 
-                    <h4>Étape 3 : création du cluster <span class="etiquette">Groupe</span></h4>
-                    <p>Le cluster a été créé sur le premier serveur, puis le second serveur l'a rejoint. La commande <code>pvecm status</code> permet de vérifier que les deux serveurs font bien partie du cluster.</p>
-                    <pre class="code"><code># Sur le premier serveur : création du cluster
+# Sur le premier serveur : création du cluster
 pvecm create &lt;nom-du-cluster&gt;
 
 # Sur le second serveur : ajout au cluster
@@ -161,8 +158,8 @@ pvecm add &lt;adresse-du-premier-serveur&gt;
 # Vérification de l'état du cluster
 pvecm status</code></pre>
 
-                    <h4>Étape 4 : configuration de la baie SAN <span class="etiquette">Groupe</span></h4>
-                    <p>La baie se configure avec le logiciel Dell PowerVault Modular Disk Storage Manager, installé sur un poste d'administration relié au port de management de la baie. Nous avons supprimé les anciennes configurations, puis créé deux groupes de disques en RAID 5 : un groupe de 5 disques à 10 000 tours par minute et un groupe de 10 disques à 15 000 tours par minute. Le RAID 5 permet de perdre un disque sans perdre de données.</p>
+                    <h4>Avril : configuration de la baie SAN</h4>
+                    <p>Nous avons configuré la baie SAN avec le logiciel Dell PowerVault Modular Disk Storage Manager. Nous avons paramétré l'adresse de gestion, supprimé les anciennes configurations RAID, puis créé deux groupes RAID 5, nommés RAID5_10k (5 disques) et RAID5_15k (10 disques). Le RAID 5 permet de perdre un disque sans perdre de données. Nous avons ensuite déclaré les deux serveurs dans la baie, dans un groupe d'hôtes, pour leur donner accès au stockage.</p>
 
                     <figure class="figure">
                         <img src="img/proxmox-baie-disques.webp" alt="Vue de face de la baie SAN : à gauche les emplacements vides, au centre le groupe de 5 disques encadré en rouge, à droite le groupe de 10 disques encadré en jaune" width="952" height="202" loading="lazy">
@@ -171,13 +168,11 @@ pvecm status</code></pre>
 
                     <figure class="figure">
                         <img src="img/proxmox-raid5.webp" alt="Capture du logiciel Dell PowerVault Modular Disk Storage Manager montrant le groupe de disques RAID5_15k en état optimal, niveau de RAID 5, interface SAS" width="1158" height="819" loading="lazy">
-                        <figcaption>Le groupe de disques RAID5_15k créé dans Modular Disk Storage Manager, en état « Optimal ».</figcaption>
+                        <figcaption>Le groupe de disques RAID5_15k dans Dell PowerVault Modular Disk Storage Manager, pendant la configuration.</figcaption>
                     </figure>
 
-                    <p>Nous avons ensuite créé un disque virtuel, puis un groupe d'hôtes contenant les deux serveurs Proxmox, et nous lui avons affecté le LUN 10. Chaque serveur est relié à la baie par deux liens actifs.</p>
-
-                    <h4>Étape 5 : multipath et volumes LVM <span class="etiquette">Groupe</span></h4>
-                    <p>Comme chaque serveur voit la baie par deux chemins, il voit aussi le même disque deux fois. Le multipath regroupe ces chemins en un seul périphérique : si un lien tombe, l'autre prend le relais. Les identifiants des disques (WWID) sont masqués ci-dessous.</p>
+                    <h4>Mai : multipath et volumes LVM</h4>
+                    <p>Nous avons mis en place le multipath avec multipath-tools, pour que chaque serveur ait plusieurs chemins vers le stockage. Si un lien tombe, l'autre prend le relais. Les deux volumes obtenus s'appellent mpath10 et mpath15. Nous avons ensuite créé un groupe de volumes LVM sur chacun. Les identifiants des disques (WWID) sont masqués ci-dessous.</p>
                     <pre class="code"><code># Installation de l'outil
 apt update
 apt install multipath-tools
@@ -202,7 +197,6 @@ multipath -a &lt;WWID-du-volume-15K&gt;</code></pre>
     }
 }</code></pre>
 
-                    <p>On recharge la configuration, on vérifie les chemins, puis on crée les volumes LVM sur les deux périphériques multipath :</p>
                     <pre class="code"><code># Rechargement de la configuration et vérification des chemins
 multipath -r
 multipath -ll
@@ -220,50 +214,184 @@ pvscan --cache</code></pre>
                 <section class="fiche-partie">
                     <h3>4. Outils et technologies utilisés</h3>
                     <ul class="liste-outils">
-                        <li>Proxmox VE (hyperviseur)</li>
-                        <li>Rufus (clé USB de démarrage)</li>
-                        <li>Dell PowerVault MD3420 (baie SAN)</li>
+                        <li>Proxmox VE 9.1</li>
+                        <li>Rufus</li>
+                        <li>Commandes pvecm</li>
+                        <li>Baie Dell PowerVault MD3420</li>
                         <li>Dell PowerVault Modular Disk Storage Manager</li>
                         <li>RAID 5</li>
                         <li>multipath-tools</li>
                         <li>LVM</li>
-                        <li>Switchs réseau, STP</li>
-                        <li>Ligne de commande Linux (Debian)</li>
+                        <li>iDRAC</li>
+                        <li>Switches</li>
                     </ul>
                 </section>
 
                 <section class="fiche-partie">
                     <h3>5. Compétences mobilisées</h3>
                     <ul>
-                        <li><a href="bts-competences.html#c1">C1 Gérer le patrimoine informatique</a> : déploiement des serveurs et de la baie, stockage en RAID 5 et chemins redondants pour assurer la continuité de service.</li>
-                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : travail en groupe de quatre avec une répartition des tâches, et rédaction de la documentation d'installation.</li>
-                        <li><a href="bts-competences.html#c5">C5 Mettre à disposition des utilisateurs un service informatique</a> : mise en service du cluster et du stockage partagé, avec des vérifications à chaque étape (<code>pvecm status</code>, <code>multipath -ll</code>, <code>pvscan</code>).</li>
+                        <li><a href="bts-competences.html#c1">C1 Gérer le patrimoine informatique</a> : nous avons mis en place un stockage partagé redondant (RAID 5, multipath), qui assure la continuité du service.</li>
+                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : nous avons préparé un planning initial, présenté le planning réel, réparti les tâches entre quatre personnes et fait un bilan d'équipe.</li>
+                        <li><a href="bts-competences.html#c5">C5 Mettre à disposition des utilisateurs un service informatique</a> : nous avons installé une infrastructure de virtualisation prête à être utilisée, et nous l'avons vérifiée avec les commandes <code>pvecm status</code> (cluster) et <code>multipath -ll</code> (stockage).</li>
                     </ul>
+                    <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
                 </section>
 
                 <section class="fiche-partie">
                     <h3>6. Résultats obtenus</h3>
-                    <ul>
-                        <li>Le cluster Proxmox fonctionne entre les deux serveurs.</li>
-                        <li>La baie SAN est configurée avec deux groupes en RAID 5.</li>
-                        <li>Le stockage partagé est accessible depuis les deux serveurs, avec le multipath.</li>
-                        <li>Une documentation d'installation de 15 pages, que j'ai rédigée, décrit toutes les étapes.</li>
-                    </ul>
-                    <p>Les machines virtuelles n'ont pas pu être déployées pendant le projet, faute de temps. L'infrastructure est prête à les accueillir.</p>
+                    <p>Ce qui fonctionne : le cluster Proxmox sur les deux serveurs, la baie SAN configurée avec deux volumes RAID 5, le stockage partagé accessible par les deux serveurs et le multipath. L'infrastructure est prête pour la virtualisation.</p>
+                    <p>Ce que nous n'avons pas eu le temps de faire : déployer les machines virtuelles.</p>
+                    <p>Livrables : la documentation d'installation du projet et le diaporama de présentation du projet (non publié sur le site).</p>
                 </section>
 
                 <section class="fiche-partie">
                     <h3>7. Bilan personnel</h3>
-                    <p>Ce qui a marché : l'installation physique et l'installation de Proxmox se sont bien passées, et à la fin du projet le cluster et le stockage partagé fonctionnaient.</p>
-                    <p>Ce qui n'a pas marché : nous n'avons pas eu le temps de créer les machines virtuelles, alors que c'était le but final de l'infrastructure.</p>
-                    <p>Nous avons rencontré plusieurs difficultés, que nous avons réglées une par une :</p>
+                    <p>Avec ce projet, j'ai appris à installer l'hyperviseur Proxmox et j'ai compris comment fonctionnent une baie SAN, le RAID 5 et le multipath. J'ai aussi appris à travailler en équipe, avec une vraie répartition des tâches, et à rédiger la documentation d'un projet.</p>
+                    <p>Ma première difficulté a été la création du cluster, c'est-à-dire relier les deux serveurs avec les commandes pvecm. J'ai fini par y arriver en lisant la documentation de Proxmox, en cherchant avec mes coéquipiers, en demandant de l'aide à l'enseignant et en faisant plusieurs essais.</p>
+                    <p>Ma deuxième difficulté a été la documentation : il fallait garder une trace de chaque étape pendant que le projet avançait. J'ai pris des notes et des captures d'écran au fur et à mesure. J'ai partagé la rédaction avec Tristan (lui pour la baie SAN, moi pour Proxmox), puis j'ai tout remis au propre à la fin.</p>
+                    <p>L'équipe a aussi rencontré d'autres difficultés :</p>
                     <ul>
-                        <li>Les serveurs et la baie SAN ne communiquaient pas : nous avons réinitialisé les switchs et reconfiguré les ports.</li>
-                        <li>La baie était inaccessible : nous avons changé l'adresse IP du poste d'administration et l'adresse de management de la baie.</li>
-                        <li>La création des RAID donnait des erreurs : nous avons complètement réinitialisé la baie, puis recréé les RAID 5.</li>
-                        <li>Une boucle réseau s'était formée entre les deux switchs : nous avons supprimé le lien redondant qui la provoquait.</li>
+                        <li>Les serveurs n'arrivaient pas à communiquer avec la baie SAN : le problème a été résolu en réinitialisant les switches, puis en reconfigurant les ports.</li>
+                        <li>L'accès à la baie SAN a été rétabli en modifiant l'adresse IP du poste et l'adresse de gestion.</li>
+                        <li>La création du RAID a demandé une réinitialisation complète de la baie.</li>
+                        <li>Enfin, une boucle réseau entre les switches a été supprimée en retirant le lien redondant.</li>
                     </ul>
-                    <p>Ce que j'ai appris : installer un hyperviseur sur un serveur physique, câbler une infrastructure complète, et comprendre comment un cluster, une baie SAN, le RAID 5 et le multipath travaillent ensemble. J'ai aussi appris à documenter chaque étape pour que quelqu'un d'autre puisse refaire l'installation.</p>
+                </section>
+
+                <p><a href="#liste-projets">Retour à la liste des projets</a></p>
+            </div>
+        </article>
+
+        <!-- =====================================================
+             Fiche 2 : mon portfolio
+             ===================================================== -->
+        <article class="section fiche" id="portfolio">
+            <div class="conteneur">
+                <p class="etiquette">Projet de 2e année, 2026-2027</p>
+                <h2>Concevoir et mettre en ligne mon portfolio</h2>
+
+                <section class="fiche-partie">
+                    <h3>1. Contexte</h3>
+                    <p>Le portfolio est le support de l'épreuve E5 du BTS SIO, « Support et mise à disposition de services informatiques ». Il est aussi évalué en cours. Je réalise ce projet seul, pour un client : mon enseignant, M. Armand, qui valide chaque livraison.</p>
+                    <p>Mon cahier des charges du 25/09/2026 fixe plusieurs contraintes :</p>
+                    <ul>
+                        <li>un site en HTML et CSS écrits à la main, sans framework, avec un peu de JavaScript seulement ;</li>
+                        <li>un affichage correct sur Chrome, Firefox, Edge et Safari, sur ordinateur et sur smartphone ;</li>
+                        <li>un hébergement gratuit sur GitHub Pages, en HTTPS ;</li>
+                        <li>un code valide au validateur du W3C et un score Lighthouse d'au moins 90 ;</li>
+                        <li>aucune donnée collectée sur les visiteurs et aucune information confidentielle de mes stages ou de mes projets (adresses IP, noms de machines, noms de personnes) ;</li>
+                        <li>des dates de livraison à respecter : la V1 le 18/11/2026, la mise en ligne le 09/12/2026, la V2 le 31/12/2026 et la V3 le 03/03/2027.</li>
+                    </ul>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>2. Objectifs</h3>
+                    <p>Le but est de montrer, avec des preuves concrètes, les compétences que j'ai acquises pendant ma formation et mes stages. Le site doit présenter :</p>
+                    <ul>
+                        <li>mon parcours et mon projet de poursuite d'études ;</li>
+                        <li>le BTS SIO, les six compétences du bloc 1 et un tableau de synthèse ;</li>
+                        <li>mes projets et mes missions de stage, chacun dans une fiche en sept points, avec un filtre par compétence ;</li>
+                        <li>ma veille technologique, avec au moins une actualité par mois.</li>
+                    </ul>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>3. Travail réalisé</h3>
+                    <p>J'ai suivi trois étapes : le cahier des charges, puis le dossier de conception, puis le développement, page par page.</p>
+
+                    <h4>Le dossier de conception (rendu le 02/10/2026)</h4>
+                    <p>Dans ce dossier, j'ai défini l'arborescence du site, dessiné les maquettes des pages, choisi la charte graphique et rédigé tous les textes. Les maquettes sont volontairement en gris, pour me concentrer sur l'emplacement des éléments.</p>
+
+                    <div class="grille">
+                        <figure class="figure">
+                            <img src="img/portfolio-maquette-accueil.webp" alt="Maquette en gris de la page d'accueil : menu en haut, emplacement de la photo, nom, formation, logo de l'établissement, puis blocs présentation, objectif et perspectives" width="1200" height="857" loading="lazy">
+                            <figcaption>Maquette de la page d'accueil.</figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <img src="img/portfolio-maquette-fiche.webp" alt="Maquette en gris d'une fiche de projet : titre, étiquettes de compétences, les sept points à gauche et les illustrations à droite" width="1200" height="857" loading="lazy">
+                            <figcaption>Maquette d'une fiche en sept points.</figcaption>
+                        </figure>
+                    </div>
+
+                    <p>Pendant la conception, j'ai fait évoluer les couleurs prévues dans le cahier des charges : le fond bleu nuit est devenu presque noir et le violet a remplacé le bleu. Je l'ai signalé dans le dossier comme une demande de changement.</p>
+
+                    <figure class="figure">
+                        <img src="img/portfolio-charte-accueil.webp" alt="Aperçu de la page d'accueil avec la charte sombre : fond presque noir, nom en violet, cartes gris foncé et bouton violet" width="1200" height="895" loading="lazy">
+                        <figcaption>Aperçu de la charte graphique appliquée à la page d'accueil, dans le dossier de conception.</figcaption>
+                    </figure>
+
+                    <h4>Le développement</h4>
+                    <p>J'ai développé le site page par page, en commençant par la version mobile (« mobile first »). Chaque modification est enregistrée avec Git, et chaque livraison reçoit une étiquette (v1, v2, v3). Les polices sont hébergées avec le site, pour ne contacter aucun service externe :</p>
+                    <pre class="code"><code>@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/poppins-latin-300-normal.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+}</code></pre>
+                    <p>Les cartes sont placées avec une grille CSS qui s'adapte seule à la largeur de l'écran :</p>
+                    <pre class="code"><code>.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}</code></pre>
+                    <p>Le filtre de cette page est écrit en JavaScript. Chaque carte porte les classes de ses compétences (<code>c1</code>, <code>c4</code>...), et le script cache les cartes qui n'ont pas la compétence choisie :</p>
+                    <pre class="code"><code>projets.forEach(function (projet) {
+    if (competence === "toutes" || projet.classList.contains(competence)) {
+        projet.classList.remove("cache");
+    } else {
+        projet.classList.add("cache");
+    }
+});</code></pre>
+
+                    <h4>Le planning</h4>
+                    <p>Mon planning fixe les jalons suivants :</p>
+                    <ul>
+                        <li>25/09/2026 : cahier des charges</li>
+                        <li>02/10/2026 : dossier de conception</li>
+                        <li>18/11/2026 : V1, toutes les pages développées</li>
+                        <li>09/12/2026 : mise en ligne sur GitHub Pages</li>
+                        <li>31/12/2026 : V2, site complet sauf le 2e stage</li>
+                        <li>03/03/2027 : V3, version définitive</li>
+                    </ul>
+                    <p>Mon diagramme de GANTT prévoit aussi une actualité de veille par mois : les 16/10/2026, 27/11/2026, 18/12/2026, 29/01/2027 et 26/02/2027.</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>4. Outils et technologies utilisés</h3>
+                    <ul class="liste-outils">
+                        <li>HTML5</li>
+                        <li>CSS3 (Flexbox, Grid, media queries)</li>
+                        <li>JavaScript</li>
+                        <li>Git et GitHub</li>
+                        <li>GitHub Pages</li>
+                        <li>Validateur du W3C</li>
+                        <li>Lighthouse</li>
+                        <li>Polices Montserrat et Poppins</li>
+                        <li>Diagramme de GANTT</li>
+                    </ul>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>5. Compétences mobilisées</h3>
+                    <ul>
+                        <li><a href="bts-competences.html#c3">C3 Développer la présence en ligne de l'organisation</a> : je crée et je fais évoluer un site web, je soigne son référencement (titres, descriptions, sitemap.xml, balises Open Graph) et je respecte le cadre juridique (mentions légales, aucune donnée collectée, informations confidentielles masquées).</li>
+                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : j'ai rédigé un cahier des charges et un dossier de conception, je suis un planning avec des jalons, et je signale les écarts, comme le changement de couleurs.</li>
+                        <li><a href="bts-competences.html#c6">C6 Organiser son développement professionnel</a> : le portfolio construit mon identité professionnelle, présente ma veille et mon projet de poursuite d'études.</li>
+                    </ul>
+                    <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>6. Résultats obtenus</h3>
+                    <p>Le résultat, c'est ce site : six pages, un affichage adapté au smartphone, à la tablette et à l'ordinateur, un filtre par compétence et un tableau de synthèse.</p>
+                    <p>Livrables : le cahier des charges, le dossier de conception, puis chaque version du site (V1 en archive .zip, puis le site en ligne pour la V2 et la V3).</p>
+                </section>
+
+                <section class="fiche-partie">
+                    <h3>7. Bilan personnel</h3>
+                    <p>Ce projet est en cours : je compléterai ce bilan à la fin, en V3.</p>
+                    <p>Ce qui a bien marché jusqu'ici : rédiger tous les textes dès le dossier de conception m'a permis de développer les pages beaucoup plus vite.</p>
+                    <p>Les difficultés rencontrées : la police Poppins ExtraLight que j'avais choisie était trop fine sur le fond sombre. Comme je l'avais prévu dans le dossier, je suis passé à Poppins Light. Le violet de la charte n'était pas assez contrasté pour les petits liens : je l'ai gardé pour les boutons et les titres, et j'ai utilisé un violet plus clair pour les liens dans le texte. Il a aussi fallu masquer toutes les informations sensibles de mes documents (adresses IP, identifiants, noms de machines) avant de les publier.</p>
                 </section>
 
                 <p><a href="#liste-projets">Retour à la liste des projets</a></p>
