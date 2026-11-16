@@ -522,6 +522,84 @@ code {
 }
 
 
+/* ---------- Page Stages ---------- */
+
+/* Fiche d'identité de l'entreprise : un libellé au-dessus de chaque information */
+.infos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    background-color: #15151C;
+    border: 1px solid #24242E;
+    border-radius: 14px;
+}
+
+.infos li {
+    padding: 0.8rem 1.25rem;
+    border-top: 1px solid #24242E;
+}
+
+/* Pas de bordure au-dessus de la première ligne */
+.infos li:first-child {
+    border-top: none;
+}
+
+.libelle {
+    display: block;
+    color: #A0A3B1;
+    font-size: 0.9rem;
+}
+
+/* Chaque mission est séparée par un trait */
+.mission {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #24242E;
+}
+
+.mission h3 {
+    font-size: 1.35rem;
+}
+
+/* Titres des 7 points d'une fiche de mission, avec le trait violet */
+.mission .fiche-partie h4 {
+    display: inline-block;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #7C4DFF;
+}
+
+/* Circuit d'un ticket : les étapes sont empilées sur mobile, en ligne sur grand écran */
+.circuit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.circuit li {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #15151C;
+    border: 1px solid #24242E;
+    border-top: 3px solid #7C4DFF;
+    border-radius: 14px;
+    padding: 1rem;
+    color: #A0A3B1;
+    font-size: 0.95rem;
+}
+
+.circuit-titre {
+    display: block;
+    color: #F5F5F7;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+
 /* ---------- Pied de page ---------- */
 
 .pied {
@@ -645,6 +723,11 @@ code {
 
     .texte-large {
         max-width: 75%;
+    }
+
+    /* Les étapes du circuit d'un ticket passent sur une seule ligne */
+    .circuit {
+        flex-direction: row;
     }
 
     /* Lignes de texte moins longues dans les fiches, plus faciles à lire */

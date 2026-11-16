@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stages | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
+    <meta name="description" content="Mes stages de BTS SIO SISR : support utilisateurs et réseau au Centre Hospitalier Ardèche Nord, puis refonte de pages web chez MKS Performance.">
+
+    <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Stages | Mehdi REZZAOUI">
+    <meta property="og:description" content="Mes stages de BTS SIO SISR : support utilisateurs et réseau au Centre Hospitalier Ardèche Nord, puis refonte de pages web chez MKS Performance.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== En-tête et menu (identique sur toutes les pages) ===== -->
+    <header class="entete" id="haut">
+        <div class="conteneur entete-contenu">
+            <a href="index.html" class="nom-site"><span class="point"></span>Mehdi REZZAOUI</a>
+
+            <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+            <nav class="menu" id="menu" aria-label="Menu principal">
+                <ul class="menu-liste" id="menu-liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="bts-competences.html">BTS et compétences</a></li>
+                    <li><a href="projets-ppe.html">Projets PPE</a></li>
+                    <li><a href="stages.html" class="actif" aria-current="page">Stages</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== Titre de la page ===== -->
+        <section class="titre-page">
+            <div class="conteneur">
+                <h1>Mes stages</h1>
+                <p class="texte-large texte-secondaire">Les entreprises qui m'ont accueilli pendant le BTS SIO, ma place dans leur service et les missions que j'y ai menées. Chaque mission est présentée dans une fiche en sept points.</p>
+            </div>
+        </section>
+
+        <!-- ===== Liste des stages ===== -->
+        <section class="section" id="liste-stages">
+            <div class="conteneur">
+                <h2>Mes stages en entreprise</h2>
+                <div class="grille">
+                    <article class="carte">
+                        <h3>Centre Hospitalier Ardèche Nord</h3>
+                        <p class="date">Stage de 1re année, du 18 au 29 mai 2026</p>
+                        <p>Service informatique. Deux missions : le support utilisateurs et la gestion des tickets, puis la réintégration des tablettes sur le réseau.</p>
+                        <p class="liste-etiquettes"><span class="etiquette">C1</span> <span class="etiquette">C2</span></p>
+                        <p><a href="#chan">Voir le stage</a></p>
+                    </article>
+                    <article class="carte">
+                        <h3>MKS Performance</h3>
+                        <p class="date">Stage de 1re année, du 1er au 26 juillet 2026</p>
+                        <p>Électronique automobile, en télétravail. Une mission : la refonte de trois pages du site web.</p>
+                        <p class="liste-etiquettes"><span class="etiquette">C3</span></p>
+                        <p><a href="#mks">Voir le stage</a></p>
+                    </article>
+                    <article class="carte">
+                        <h3>Stage de 2e année</h3>
+                        <p class="date">Janvier 2027</p>
+                        <p>Mon stage de 2e année aura lieu en janvier 2027. Sa présentation et ses fiches de missions seront ajoutées après le stage.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Stage 1 : Centre Hospitalier Ardèche Nord
+             ===================================================== -->
+        <section class="section fiche" id="chan">
+            <div class="conteneur">
+                <p class="etiquette">Stage de 1re année</p>
+                <h2>Centre Hospitalier Ardèche Nord</h2>
+
+                <div class="fiche-partie">
+                    <ul class="infos">
+                        <li><span class="libelle">Structure</span> Centre Hospitalier Ardèche Nord (CHAN), établissement public de santé</li>
+                        <li><span class="libelle">Secteur</span> Santé publique, établissement hospitalier</li>
+                        <li><span class="libelle">Localisation</span> Annonay (07)</li>
+                        <li><span class="libelle">Taille</span> Plusieurs centaines de professionnels (personnel soignant et administratif), budget annuel d'environ 100 millions d'euros</li>
+                        <li><span class="libelle">Service d'accueil</span> Service informatique de six personnes : le responsable du service (mon maître de stage), une personne qui supervise l'infrastructure de sécurité, trois techniciens chargés du support et des tickets, et un ingénieur systèmes et réseaux</li>
+                        <li><span class="libelle">Période</span> Du 18 au 29 mai 2026 (2 semaines), en 1re année</li>
+                    </ul>
+
+                    <p>Contexte : le service informatique fait en sorte que tous les outils numériques du personnel restent disponibles. Dans un hôpital, la moindre panne d'un poste ou d'un accès peut avoir un impact direct sur la prise en charge des patients.</p>
+                    <p>Ma place dans le service : j'étais rattaché à l'équipe de support et encadré par les techniciens du service.</p>
+
+                    <figure class="figure figure-etroite">
+                        <img src="img/chan-baie-reseau.webp" alt="Baie réseau du service informatique avec des switches et des serveurs reliés par de nombreux câbles réseau et fibres, les étiquettes d'identification étant masquées par des rectangles noirs" width="625" height="833" loading="lazy">
+                        <figcaption>Une baie réseau gérée par le service informatique, avec les éléments identifiants masqués.</figcaption>
+                    </figure>
+                </div>
+
+                <!-- ----- Mission 1 ----- -->
+                <article class="mission" id="support">
+                    <h3>Mission 1 : support utilisateurs et gestion des tickets</h3>
+
+                    <section class="fiche-partie">
+                        <h4>1. Contexte</h4>
+                        <p>Les utilisateurs des différents services de l'hôpital envoient leurs demandes sous forme de tickets. J'étais rattaché à l'équipe de support et encadré par les techniciens du service.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>2. Objectifs</h4>
+                        <p>Prendre en charge et résoudre les tickets qu'on m'attribuait : problèmes matériels, demandes de comptes et de droits d'accès, dysfonctionnements d'applications métier.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>3. Travail réalisé</h4>
+                        <p>Chaque demande suit le même circuit, de sa création à sa clôture :</p>
+
+                        <!-- Circuit d'un ticket : une liste numérotée mise en forme avec Flexbox -->
+                        <ol class="circuit">
+                            <li><span class="circuit-titre">Création</span> Par l'utilisateur ou un membre de l'équipe, suite à un appel</li>
+                            <li><span class="circuit-titre">Qualification et priorisation</span> Nature du problème, urgence</li>
+                            <li><span class="circuit-titre">Prise en charge</span> Attribution à un technicien</li>
+                            <li><span class="circuit-titre">Intervention</span> À distance ou sur site</li>
+                            <li><span class="circuit-titre">Clôture</span> Description de la résolution apportée</li>
+                        </ol>
+
+                        <p>Je faisais le premier diagnostic en autonomie. En cas de blocage, ou avant une action sensible comme une modification de droits d'accès, je demandais l'avis d'un technicien.</p>
+                        <p>Premier exemple : une imprimante d'étiquettes Zebra ZD421 n'était pas détectée sur le réseau. Le diagnostic a montré un problème de configuration IP sur l'imprimante. Une fois la configuration corrigée et le pilote réinstallé, elle a fonctionné de nouveau.</p>
+                        <p>Deuxième exemple : un poste redémarrait tout seul avec un écran bleu. Un test de diagnostic complet (mémoire, disque, carte vidéo) a été lancé sur le poste. Il n'a montré aucune panne matérielle. Le problème venait d'un pilote ou d'une mise à jour logicielle.</p>
+                        <p>Chaque matin, je faisais aussi une vérification visuelle des salles serveur, accessibles par badge, pour repérer les voyants rouges qui signalent une anomalie.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>4. Outils et technologies utilisés</h4>
+                        <ul class="liste-outils">
+                            <li>GLPI (tickets et parc)</li>
+                            <li>Windows</li>
+                            <li>Active Directory</li>
+                            <li>Postes en machines virtuelles</li>
+                            <li>Session à distance</li>
+                            <li>Outil de diagnostic matériel</li>
+                        </ul>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>5. Compétences mobilisées</h4>
+                        <ul>
+                            <li><a href="bts-competences.html#c1">C1 Gérer le patrimoine informatique</a> : j'ai traité des demandes de comptes et de droits d'accès dans l'environnement Active Directory, avec la validation d'un technicien pour les modifications de droits. Je vérifiais aussi chaque matin les voyants des salles serveur.</li>
+                            <li><a href="bts-competences.html#c2">C2 Répondre aux incidents et aux demandes d'assistance et d'évolution</a> : j'ai pris en charge, diagnostiqué et résolu des incidents et des demandes suivis dans GLPI.</li>
+                        </ul>
+                        <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>6. Résultats obtenus</h4>
+                        <p>L'imprimante Zebra a été remise en service. Sur le poste à l'écran bleu, la panne matérielle a été écartée.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>7. Bilan personnel</h4>
+                        <p>Cette mission m'a appris à diagnostiquer rapidement un problème à partir d'une description parfois imprécise, et à expliquer les choses simplement à des personnes qui ne sont pas informaticiennes.</p>
+                        <p>Les deux interventions les plus difficiles ont concerné l'imprimante Zebra et le poste qui redémarrait tout seul (voir le point 3).</p>
+                        <p>J'ai aussi compris qu'il faut être réactif dans un hôpital, parce qu'une panne a des conséquences directes sur le travail des équipes soignantes.</p>
+                    </section>
+                </article>
+
+                <!-- ----- Mission 2 ----- -->
+                <article class="mission" id="tablettes">
+                    <h3>Mission 2 : réintégration des tablettes sur le réseau</h3>
+
+                    <section class="fiche-partie">
+                        <h4>1. Contexte</h4>
+                        <p>Des tablettes utilisées par les enfants dans différents services de l'hôpital n'avaient plus accès au réseau, à la suite d'une purge de la liste des appareils autorisés.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>2. Objectifs</h4>
+                        <p>Redonner à ces tablettes l'accès au réseau et à Internet.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>3. Travail réalisé</h4>
+                        <p>J'ai relevé l'adresse MAC de chaque tablette concernée. Les tablettes ont ensuite été réintégrées sur le réseau. Voici le format d'une adresse relevée, avec les trois derniers segments, propres à chaque appareil, volontairement masqués :</p>
+                        <pre class="code"><code>Adresse MAC relevée (exemple) : E0:B5:5F:XX:XX:XX</code></pre>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>4. Outils et technologies utilisés</h4>
+                        <ul class="liste-outils">
+                            <li>Tablettes</li>
+                            <li>Adresses MAC</li>
+                            <li>Liste des appareils autorisés sur le réseau</li>
+                        </ul>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>5. Compétences mobilisées</h4>
+                        <ul>
+                            <li><a href="bts-competences.html#c1">C1 Gérer le patrimoine informatique</a> : j'ai recensé et identifié des ressources numériques (les tablettes et leurs adresses MAC).</li>
+                            <li><a href="bts-competences.html#c2">C2 Répondre aux incidents et aux demandes d'assistance et d'évolution</a> : j'ai participé au traitement d'une demande qui concernait un service réseau, en relevant les adresses MAC nécessaires à la réintégration des tablettes.</li>
+                        </ul>
+                        <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>6. Résultats obtenus</h4>
+                        <p>Les tablettes ont retrouvé l'accès au réseau et à Internet.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>7. Bilan personnel</h4>
+                        <p>Cette mission était ponctuelle et ne m'a pas posé de difficulté particulière. Elle m'a fait recenser des adresses MAC directement sur les tablettes. Elle m'a aussi montré concrètement qu'un appareil doit figurer, avec son adresse MAC, sur la liste des appareils autorisés pour accéder au réseau.</p>
+                    </section>
+                </article>
+
+                <p><a href="#liste-stages">Retour à la liste des stages</a></p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Stage 2 : MKS Performance
+             ===================================================== -->
+        <section class="section fiche" id="mks">
+            <div class="conteneur">
+                <p class="etiquette">Stage de 1re année</p>
+                <h2>MKS Performance</h2>
+
+                <div class="fiche-partie">
+                    <ul class="infos">
+                        <li><span class="libelle">Secteur</span> Électronique automobile</li>
+                        <li><span class="libelle">Localisation</span> Davézieux (07)</li>
+                        <li><span class="libelle">Taille</span> Très petite structure</li>
+                        <li><span class="libelle">Organisation</span> Stage en télétravail</li>
+                        <li><span class="libelle">Période</span> Du 1er au 26 juillet 2026 (4 semaines), en 1re année</li>
+                    </ul>
+                    <p>Ma place dans l'entreprise : j'étais chargé de la refonte de trois pages de son site web.</p>
+                </div>
+
+                <!-- ----- Mission ----- -->
+                <article class="mission" id="site-web">
+                    <h3>Mission : refonte de trois pages du site web</h3>
+
+                    <section class="fiche-partie">
+                        <h4>1. Contexte</h4>
+                        <p>L'entreprise voulait refaire trois pages de son site web : Tarifs, Services et Contact. Je travaillais en télétravail, sur une période de quatre semaines. Pour réaliser certaines fonctions des pages, je devais utiliser le JavaScript, que je ne connaissais pas encore.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>2. Objectifs</h4>
+                        <ul>
+                            <li>Refaire les pages Tarifs, Services et Contact.</li>
+                            <li>Les rendre lisibles sur smartphone, avec un menu adapté au mobile.</li>
+                            <li>Vérifier les informations saisies dans le formulaire de la page Contact.</li>
+                        </ul>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>3. Travail réalisé</h4>
+                        <p>Pendant le stage, j'ai commencé la refonte des trois pages, mais je ne l'ai pas terminée : le temps a manqué, et j'ai dû apprendre le JavaScript en même temps.</p>
+                        <p>Après le stage, j'ai terminé les pages en autonomie, en HTML, CSS et JavaScript, sans framework :</p>
+                        <ul>
+                            <li>des variables CSS pour regrouper les couleurs du site au même endroit ;</li>
+                            <li>un menu mobile, qui s'ouvre et se ferme avec un bouton ;</li>
+                            <li>une validation du formulaire de contact en JavaScript.</li>
+                        </ul>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>4. Outils et technologies utilisés</h4>
+                        <ul class="liste-outils">
+                            <li>HTML</li>
+                            <li>CSS (variables CSS)</li>
+                            <li>JavaScript</li>
+                            <li>Sans framework</li>
+                        </ul>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>5. Compétences mobilisées</h4>
+                        <ul>
+                            <li><a href="bts-competences.html#c3">C3 Développer la présence en ligne de l'organisation</a> : j'ai fait évoluer trois pages du site web de l'entreprise.</li>
+                        </ul>
+                        <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>6. Résultats obtenus</h4>
+                        <p>Les trois pages sont terminées. Elles n'ont pas été publiées sur le site réel de l'entreprise.</p>
+                    </section>
+
+                    <section class="fiche-partie">
+                        <h4>7. Bilan personnel</h4>
+                        <p>Ce qui n'a pas marché : je n'ai pas pu finir la mission pendant le stage, par manque de temps et parce que je devais d'abord apprendre le JavaScript.</p>
+                        <p>La solution : j'ai terminé les pages en autonomie après le stage.</p>
+                        <p>Ce que j'ai appris : les bases du JavaScript, avec le menu mobile et la validation d'un formulaire, et l'utilisation des variables CSS.</p>
+                    </section>
+                </article>
+
+                <p><a href="#liste-stages">Retour à la liste des stages</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Pied de page (identique sur toutes les pages) ===== -->
+    <footer class="pied">
+        <div class="conteneur">
+            <ul class="pied-liens">
+                <li><a href="mailto:rezzaouimehdi@hotmail.com">rezzaouimehdi@hotmail.com</a></li>
+                <li><a href="docs/CV_Mehdi_REZZAOUI.pdf">Télécharger mon CV (PDF)</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+            <p>Mehdi REZZAOUI, portfolio BTS SIO SISR, 2026-2027</p>
+        </div>
+    </footer>
+
+    <!-- Bouton "Retour en haut" : simple lien vers l'en-tête -->
+    <a href="#haut" class="retour-haut" aria-label="Retour en haut de la page">↑</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
