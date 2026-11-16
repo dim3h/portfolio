@@ -1,16 +1,18 @@
-/* =========================================
-   Portfolio Mehdi REZZAOUI - feuille de style
-   Mobile first : style de base pour le téléphone,
-   puis media queries pour tablette et ordinateur.
+/* Feuille de style de mon portfolio
 
-   Couleurs :
-   #0D0D12 fond de page / #15151C fond des cartes / #24242E bordures
-   #7C4DFF violet / #A98BFF violet clair (liens)
-   #F5F5F7 texte / #A0A3B1 texte secondaire
-   ========================================= */
+   J'ai fait le site en "mobile first" comme en cours : d'abord le style
+   pour le téléphone, puis les media queries pour la tablette (768px)
+   et l'ordi (1024px).
+
+   Mes couleurs (charte de mon dossier de conception) :
+   fond #0D0D12, cartes #15151C, bordures #24242E,
+   violet #7C4DFF, et un violet plus clair #A98BFF pour les liens
+   (le violet normal n'avait pas assez de contraste sur le fond noir),
+   texte #F5F5F7, texte gris #A0A3B1 */
 
 
-/* ---------- Polices ---------- */
+/* ----- Polices -----
+   téléchargées dans fonts/ pour ne pas passer par Google Fonts (RGPD) */
 
 @font-face {
     font-family: "Montserrat";
@@ -34,7 +36,7 @@
 }
 
 
-/* ---------- Général ---------- */
+/* ----- Réglages de base ----- */
 
 * {
     box-sizing: border-box;
@@ -87,7 +89,7 @@ a:hover {
     color: #F5F5F7;
 }
 
-/* contour visible quand on navigue au clavier */
+/* pour voir où on est quand on navigue avec la touche Tab */
 a:focus {
     outline: 2px solid #A98BFF;
     outline-offset: 3px;
@@ -108,13 +110,14 @@ ul {
 }
 
 
-/* ---------- En-tête et menu ---------- */
+/* ----- En-tête et menu ----- */
 
 .entete {
     border-bottom: 1px solid #24242E;
 }
 
-/* le nom à gauche, le menu à droite (le menu passe dessous sur mobile) */
+/* flex : mon nom à gauche et les liens à droite.
+   avec flex-wrap, le menu passe en dessous quand il n'y a pas la place (téléphone) */
 .entete-contenu {
     display: flex;
     justify-content: space-between;
@@ -135,7 +138,7 @@ ul {
     text-decoration: none;
 }
 
-/* point violet devant le nom */
+/* le petit rond violet devant mon nom */
 .point {
     display: inline-block;
     width: 0.7rem;
@@ -164,14 +167,14 @@ ul {
     color: #F5F5F7;
 }
 
-/* page en cours */
+/* souligne la page où on est (j'ai mis la classe "actif" à la main sur chaque page) */
 .actif {
     color: #F5F5F7;
     border-bottom: 2px solid #7C4DFF;
 }
 
 
-/* ---------- Sections et cartes ---------- */
+/* ----- Sections et cartes ----- */
 
 .section {
     padding: 3rem 0;
@@ -190,7 +193,7 @@ ul {
     padding: 1.5rem;
 }
 
-/* trait violet sous le titre des cartes */
+/* le petit trait violet sous les titres, comme dans ma charte */
 .carte h3,
 .titre-carte {
     display: inline-block;
@@ -224,7 +227,7 @@ ul {
     font-size: 0.95rem;
 }
 
-/* petites pastilles C1, C2... */
+/* les pastilles C1, C2... (un border-radius très grand donne la forme de pilule) */
 .etiquette {
     display: inline-block;
     border: 1px solid #7C4DFF;
@@ -237,7 +240,7 @@ ul {
 }
 
 
-/* ---------- Boutons ---------- */
+/* ----- Boutons ----- */
 
 .boutons {
     display: flex;
@@ -273,7 +276,7 @@ ul {
 }
 
 
-/* ---------- Haut des pages ---------- */
+/* ----- Haut des pages (accueil et titres) ----- */
 
 .accueil {
     padding: 3.5rem 0;
@@ -296,7 +299,7 @@ ul {
     margin: 0;
 }
 
-/* logo à côté du nom de l'école */
+/* le logo de l'école à côté de son nom */
 .etablissement {
     display: flex;
     align-items: center;
@@ -324,9 +327,10 @@ ul {
 }
 
 
-/* ---------- Tableau de synthèse ---------- */
+/* ----- Tableau de synthèse ----- */
 
-/* sur mobile le tableau est trop large : on peut le faire glisser */
+/* sur téléphone le tableau est trop large : avec overflow-x il défile
+   au lieu de dépasser de l'écran */
 .tableau-defilement {
     overflow-x: auto;
     margin-bottom: 1.5rem;
@@ -372,7 +376,7 @@ ul {
 }
 
 
-/* ---------- Fiches (projets et missions) ---------- */
+/* ----- Fiches des projets et des missions ----- */
 
 .fiche {
     border-top: 1px solid #24242E;
@@ -394,7 +398,7 @@ ul {
     gap: 0.4rem;
 }
 
-/* commandes et code */
+/* blocs pour mes commandes (overflow-x pour les lignes trop longues) */
 .code {
     background-color: #15151C;
     border: 1px solid #24242E;
@@ -409,7 +413,7 @@ code {
     font-family: Consolas, "Courier New", monospace;
 }
 
-/* images avec légende */
+/* images avec leur légende en dessous */
 .figure {
     margin: 1.5rem 0;
 }
@@ -426,12 +430,12 @@ code {
     font-size: 0.95rem;
 }
 
-/* pour les photos en hauteur */
+/* sinon la photo de la baie prend tout l'écran */
 .photo-hauteur {
     max-width: 360px;
 }
 
-/* outils en pastilles */
+/* la liste des outils en petites pastilles */
 .liste-outils {
     display: flex;
     flex-wrap: wrap;
@@ -448,7 +452,7 @@ code {
 }
 
 
-/* ---------- Page Stages ---------- */
+/* ----- Page Stages ----- */
 
 .infos {
     list-style: none;
@@ -484,7 +488,7 @@ code {
     border-bottom: 2px solid #7C4DFF;
 }
 
-/* les 5 étapes d'un ticket */
+/* les 5 étapes d'un ticket : même principe de grille que pour les cartes */
 .circuit {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -512,7 +516,7 @@ code {
 }
 
 
-/* ---------- Page Veille ---------- */
+/* ----- Page Veille ----- */
 
 .actualite {
     display: grid;
@@ -541,7 +545,7 @@ code {
 }
 
 
-/* ---------- Pied de page ---------- */
+/* ----- Pied de page ----- */
 
 .pied {
     border-top: 1px solid #24242E;
@@ -564,7 +568,8 @@ code {
 }
 
 
-/* ---------- Bouton retour en haut ---------- */
+/* ----- Bouton retour en haut (vu dans le TP Responsive) -----
+   position fixed : il reste toujours en bas à droite de l'écran */
 
 .retour-haut {
     position: fixed;
@@ -588,7 +593,7 @@ code {
 }
 
 
-/* ========== Tablette (768px et plus) ========== */
+/* ===== Tablette : à partir de 768px ===== */
 
 @media (min-width: 768px) {
 
@@ -609,6 +614,7 @@ code {
         padding: 5rem 0;
     }
 
+    /* plus besoin du message, le tableau rentre en entier */
     .indication-mobile {
         display: none;
     }
@@ -630,7 +636,7 @@ code {
 }
 
 
-/* ========== Ordinateur (1024px et plus) ========== */
+/* ===== Ordinateur : à partir de 1024px ===== */
 
 @media (min-width: 1024px) {
 
@@ -642,6 +648,7 @@ code {
         font-size: 1.3rem;
     }
 
+    /* pour éviter des lignes de texte trop longues sur grand écran */
     .texte-large {
         max-width: 75%;
     }
@@ -650,7 +657,7 @@ code {
         max-width: 850px;
     }
 
-    /* la date à gauche, l'article à droite */
+    /* 2 colonnes : la date à gauche, l'article à droite */
     .actualite {
         grid-template-columns: 8rem 1fr;
         gap: 2rem;
