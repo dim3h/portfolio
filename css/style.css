@@ -536,6 +536,11 @@ code {
     font-size: 1.1rem;
 }
 
+/* titre h3 en dehors d'une carte (état de l'art) */
+.sous-titre {
+    margin-top: 2.5rem;
+}
+
 .actualite h3 {
     margin-top: 0.75rem;
 }

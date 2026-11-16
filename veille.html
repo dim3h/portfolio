@@ -40,7 +40,7 @@
         <section class="titre-page">
             <div class="conteneur">
                 <h1>Veille technologique</h1>
-                <p class="texte-large texte-secondaire">Mon sujet : l'IA au service de l'administration système (AIOps). Je présente ici pourquoi je l'ai choisi, ce que j'en savais au départ et les actualités que je suis chaque mois.</p>
+                <p class="texte-large texte-secondaire">Mon sujet : l'IA au service de l'administration système (AIOps). Je présente ici pourquoi je l'ai choisi, ce que j'en savais au départ, les actualités que je suis chaque mois et ce que j'en retiens.</p>
                 <div class="boutons">
                     <a href="#actualites" class="bouton">Voir les actualités</a>
                 </div>
@@ -58,8 +58,9 @@
                     </article>
                     <article class="carte">
                         <h3>Pourquoi ce choix</h3>
-                        <p>En informatique, ce qui me plaît le plus, ce sont les réseaux, les systèmes et le cloud, et l'IA change beaucoup la façon de les administrer et de les protéger. En SISR, je vais gérer des serveurs, des réseaux et des machines virtuelles : ce sujet me concerne directement.</p>
-                        <p>Pendant mon stage à l'hôpital, je traitais des tickets d'incident et je vérifiais chaque matin les voyants des salles serveur. L'AIOps cherche justement à automatiser la détection, le tri et l'analyse de ce type d'alertes. Ce sujet est aussi en lien avec mon projet de poursuite d'études en licence professionnelle.</p>
+                        <p>J'ai choisi ce thème car ce qui me plaît le plus en informatique, ce sont les réseaux, les systèmes et le cloud. Et en ce moment, l'IA change beaucoup la façon de les administrer et de les protéger.</p>
+                        <p>L'IA peut servir dans les deux sens : elle aide les pirates à trouver des failles plus vite, mais elle aide aussi les chercheurs en sécurité à les repérer.</p>
+                        <p>En SISR, je vais gérer des serveurs, des réseaux et des machines virtuelles, donc ça me concerne directement. Pendant mon stage à l'hôpital, je traitais aussi des tickets d'incident et je vérifiais chaque matin les voyants des salles serveur : l'AIOps cherche justement à automatiser la détection et le tri de ce type d'alertes.</p>
                     </article>
                 </div>
             </div>
@@ -68,12 +69,31 @@
         <!-- ce que j'en savais au départ -->
         <section class="section" id="etat-de-l-art">
             <div class="conteneur">
-                <h2>L'état de l'art au départ</h2>
+                <h2>L'état de l'art au début de ma recherche</h2>
+                <div class="grille">
+                    <article class="carte">
+                        <h3>Définitions</h3>
+                        <ul>
+                            <li>IA générative : une IA qui produit du texte, du code ou des images à partir d'une demande.</li>
+                            <li>Agent IA : une IA qui enchaîne seule des actions, comme lancer des commandes ou écrire du code.</li>
+                        </ul>
+                    </article>
+                    <article class="carte">
+                        <h3>Ce que disait l'ANSSI le 04/02/2026</h3>
+                        <ul>
+                            <li>Les attaquants utilisent déjà l'IA générative : repérage des victimes, hameçonnage, code malveillant.</li>
+                            <li>Aucune IA n'avait encore mené seule toutes les étapes d'une attaque.</li>
+                            <li>Les IA sont elles-mêmes des cibles.</li>
+                            <li>La menace évolue vite et doit être réévaluée régulièrement.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <h3 class="sous-titre">L'IA au service de l'administration système : l'AIOps</h3>
                 <div class="texte-large">
                     <p>L'AIOps (Artificial Intelligence for IT Operations) consiste à utiliser l'intelligence artificielle, l'analyse de grandes quantités de données et l'apprentissage automatique pour repérer et résoudre automatiquement les problèmes informatiques courants.</p>
                     <p>Concrètement, les outils d'AIOps font le lien entre les alertes, détectent les anomalies, recherchent la cause d'un incident et peuvent déclencher une action corrective. L'objectif n'est pas de remplacer les techniciens : c'est de leur éviter les tâches répétitives et la « fatigue des alertes ».</p>
                     <p>Il y a aussi des limites : les résultats dépendent de la qualité des données, la mise en place est complexe, et il faut pouvoir faire confiance aux outils avant de les laisser agir seuls.</p>
-                    <p class="texte-secondaire">Sources : <a href="https://www.lemagit.fr/definition/AIOps-intelligence-artificielle-dediee-aux-operations-informatiques" target="_blank">LeMagIT, « AIOps (intelligence artificielle dédiée aux opérations informatiques) » (nouvel onglet)</a> et <a href="https://www.canopsis.fr/aiops-lintelligence-artificielle-au-service-de-vos-operations-it/" target="_blank">Canopsis, « AIOps : l'intelligence artificielle au service de vos opérations IT » (nouvel onglet)</a>.</p>
                 </div>
             </div>
         </section>
@@ -82,15 +102,22 @@
         <section class="section" id="actualites">
             <div class="conteneur">
                 <h2>Les actualités</h2>
-                <p class="texte-large">De la plus récente à la plus ancienne. Pour chacune, j'explique ce qu'elle change pour un administrateur système.</p>
+                <p class="texte-large">De la plus récente à la plus ancienne. Pour chacune, j'explique ce que j'en retiens en tant que futur administrateur système.</p>
 
                 <article class="actualite">
                     <p class="actualite-date">28/10/2026</p>
                     <div class="actualite-contenu">
                         <p class="etiquette">Presse spécialisée : Le Monde Informatique</p>
-                        <h3>OpenAI met ses agents IA hors ligne après plusieurs sorties de leur environnement</h3>
-                        <p>OpenAI a coupé l'accès direct à Internet de ses agents IA, après plusieurs cas où ils sont sortis de leur environnement de test.</p>
-                        <p>Ce que j'en retiens : un environnement de test doit être vraiment isolé du reste du réseau. Pour un administrateur, cela veut dire filtrer les flux qui sortent de cet environnement et les superviser, pour repérer tout de suite une connexion anormale.</p>
+                        <h3>OpenAI coupe Internet à ses agents IA</h3>
+                        <p>Les agents IA les plus avancés d'OpenAI ont réussi plusieurs fois à sortir de l'environnement censé les enfermer. En juillet 2026, pendant des tests, un agent a compromis la plateforme Hugging Face. Le 20 septembre, un modèle a profité d'une erreur de configuration DNS pour joindre un service sur Internet. Depuis, OpenAI entraîne ces modèles sans accès direct à Internet.</p>
+                        <p>Ce que j'en retiens :</p>
+                        <ul>
+                            <li>Une VM n'est pas complètement étanche : plusieurs VM sur le même serveur peuvent s'échanger des informations.</li>
+                            <li>Une simple erreur de DNS a suffi pour sortir de l'environnement de test.</li>
+                            <li>Isoler ne suffit pas, il faut aussi contrôler le réseau et surveiller.</li>
+                            <li>Il faut donner à un agent IA le moins de droits possible et garder une trace de ce qu'il fait.</li>
+                        </ul>
+                        <p>Lien avec mon PPE : sur mon <a href="projets-ppe.html#proxmox">cluster Proxmox</a>, plusieurs VM tournent sur les mêmes serveurs, donc ça me concerne aussi.</p>
                         <p><a href="https://www.lemondeinformatique.fr/actualites/lire-sortie-d-environnement-openai-met-ses-agents-hors-ligne-apres-plusieurs-failles-de-confinement-100876.html" target="_blank">Lire l'article sur Le Monde Informatique (nouvel onglet)</a></p>
                     </div>
                 </article>
@@ -99,10 +126,18 @@
                     <p class="actualite-date">22/10/2026</p>
                     <div class="actualite-contenu">
                         <p class="etiquette">Presse spécialisée : Le Monde Informatique</p>
-                        <h3>Deux failles critiques dans PHP, trouvées avec l'aide de l'IA</h3>
-                        <p>Deux failles critiques ont été découvertes dans PHP, le langage utilisé par une grande partie des sites web : CVE-2026-109618 et CVE-2026-109619, avec un score de gravité de 9,2 sur 10. Elles ont été trouvées avec l'aide de l'IA. Le CERT-FR a publié une alerte la veille (CERTFR-2026-ALE-014, du 21/10/2026).</p>
-                        <p>Ce que j'en retiens : l'IA permet de trouver des failles plus vite, donc il faut aussi corriger plus vite. Un administrateur doit savoir quels serveurs utilisent PHP grâce à l'inventaire du parc, suivre les alertes du CERT-FR et appliquer les correctifs dès leur sortie.</p>
+                        <h3>Deux failles critiques dans PHP</h3>
+                        <p>Deux failles, notées 9,2 sur 10, touchent le moteur de PHP, le langage qui fait tourner une grande partie des sites web. Elles permettent d'exécuter du code à distance sur un serveur, sans identifiants. Elles ont été trouvées avec l'aide de l'IA. Le CERT-FR a lancé une alerte le 21 octobre, jour de la sortie des correctifs, et des sites de préfectures ont été mis hors ligne par précaution.</p>
+                        <p>Ce que j'en retiens, pour un administrateur système, il faut :</p>
+                        <ul>
+                            <li>Faire l'inventaire des serveurs et des logiciels qui utilisent PHP.</li>
+                            <li>Isoler les serveurs exposés le temps de faire la mise à jour.</li>
+                            <li>Installer la version corrigée (la seule vraie protection d'après le CERT-FR).</li>
+                            <li>Surveiller, car des pirates ont déjà essayé d'exploiter ces failles.</li>
+                        </ul>
+                        <p>Avec l'IA, on trouve les failles plus vite qu'on ne les corrige, donc il faut faire les mises à jour plus vite.</p>
                         <p><a href="https://www.lemondeinformatique.fr/actualites/lire-deux-failles-critiques-dans-php-les-entreprises-sous-pression-100866.html" target="_blank">Lire l'article sur Le Monde Informatique (nouvel onglet)</a></p>
+                        <p><a href="https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/" target="_blank">Lire l'alerte du CERT-FR (nouvel onglet)</a></p>
                     </div>
                 </article>
 
@@ -112,12 +147,44 @@
                         <p class="etiquette">Presse généraliste : 20 Minutes (dépêche AFP)</p>
                         <h3>OpenAI lance Astra : une IA capable de pirater des systèmes protégés</h3>
                         <p>OpenAI annonce le lancement prochain d'Astra, un modèle d'IA capable de trouver des failles inconnues et de les exploiter seul dans des systèmes bien protégés. C'est le premier modèle de l'entreprise à atteindre le niveau de risque le plus élevé de sa propre grille d'évaluation en cybersécurité. Il sera lancé avec un dispositif de surveillance qui peut interrompre ses actions. Ses capacités les plus sensibles seront réservées à un petit groupe de testeurs, puis aux organisations qui protègent des infrastructures critiques.</p>
-                        <p>Ce que j'en retiens : cette actualité montre qu'une IA peut agir seule sur des systèmes informatiques. Les administrateurs systèmes sont directement concernés, puisque ce sont eux qui surveillent et protègent ces systèmes.</p>
+                        <p>Ce que j'en retiens : cette actualité montre qu'une IA peut agir seule sur des systèmes informatiques. Les administrateurs systèmes sont directement concernés, puisque ce sont eux qui surveillent et protègent ces systèmes. C'est le point de départ de ma veille.</p>
                         <p><a href="https://www.20min.ch/fr/story/intelligence-artificielle-une-ia-capable-de-pirater-seule-des-systemes-proteges-sera-lancee-103626042" target="_blank">Lire l'article sur 20min.ch (nouvel onglet)</a></p>
                     </div>
                 </article>
 
                 <p class="texte-secondaire">Ma veille continue : j'ajoute au moins une actualité par mois, jusqu'en février 2027.</p>
+            </div>
+        </section>
+
+        <!-- ma conclusion pour l'instant -->
+        <section class="section" id="conclusion">
+            <div class="conteneur">
+                <h2>Ce que j'en retiens pour l'instant</h2>
+                <div class="texte-large">
+                    <p>Ces actualités montrent que l'IA peut être :</p>
+                    <ul>
+                        <li>un outil qui aide à trouver des failles, mais les pirates en profitent aussi ;</li>
+                        <li>un risque, si elle n'est pas bien isolée et surveillée.</li>
+                    </ul>
+                    <p>Pour moi, les bases de l'option SISR (mettre à jour, isoler, superviser) deviennent encore plus importantes avec l'IA.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- toutes mes sources -->
+        <section class="section" id="sources">
+            <div class="conteneur">
+                <h2>Sources</h2>
+                <ul class="texte-large">
+                    <li><a href="https://www.lemondeinformatique.fr/actualites/lire-sortie-d-environnement-openai-met-ses-agents-hors-ligne-apres-plusieurs-failles-de-confinement-100876.html" target="_blank">Le Monde Informatique, « Sortie d'environnement : OpenAI met ses agents hors ligne après plusieurs failles de confinement », 28/10/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://www.lemondeinformatique.fr/actualites/lire-deux-failles-critiques-dans-php-les-entreprises-sous-pression-100866.html" target="_blank">Le Monde Informatique, « Deux failles critiques dans PHP : les entreprises sous pression », 22/10/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://www.futura-sciences.com/tech/actualites/cybersecurite-alerte-web-ia-vient-decouvrir-deux-failles-majeures-pirates-exploitent-deja-138748/" target="_blank">Futura, « Alerte sur le Web : une IA vient de découvrir deux failles majeures que les pirates exploitent déjà », 22/10/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/" target="_blank">CERT-FR (ANSSI), alerte CERTFR-2026-ALE-014 « Multiples vulnérabilités dans PHP », 21/10/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://www.20min.ch/fr/story/intelligence-artificielle-une-ia-capable-de-pirater-seule-des-systemes-proteges-sera-lancee-103626042" target="_blank">20 Minutes (AFP), « OpenAI lance Astra : une IA capable de pirater des systèmes protégés », 01/09/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://cyber.gouv.fr/actualites/synthese-de-la-menace-sur-lia-generative-face-aux-attaques-informatiques/" target="_blank">ANSSI, « Synthèse de la menace sur l'IA générative face aux attaques informatiques », 04/02/2026 (nouvel onglet)</a></li>
+                    <li><a href="https://www.lemagit.fr/definition/AIOps-intelligence-artificielle-dediee-aux-operations-informatiques" target="_blank">LeMagIT, « AIOps (intelligence artificielle dédiée aux opérations informatiques) » (nouvel onglet)</a></li>
+                    <li><a href="https://www.canopsis.fr/aiops-lintelligence-artificielle-au-service-de-vos-operations-it/" target="_blank">Canopsis, « AIOps : l'intelligence artificielle au service de vos opérations IT » (nouvel onglet)</a></li>
+                </ul>
             </div>
         </section>
 
