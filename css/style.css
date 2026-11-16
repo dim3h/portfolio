@@ -1,27 +1,21 @@
-/* =========================================================
-   Feuille de style du portfolio de Mehdi REZZAOUI
-   Organisation : mobile first (style de base pour le mobile,
-   puis media queries pour la tablette et l'ordinateur).
+/* =========================================
+   Portfolio Mehdi REZZAOUI - feuille de style
+   Mobile first : style de base pour le téléphone,
+   puis media queries pour tablette et ordinateur.
 
-   Charte graphique :
-   - Fond de page      #0D0D12
-   - Fond des cartes   #15151C
-   - Bordures          #24242E
-   - Violet principal  #7C4DFF (boutons, soulignés, grand titre)
-   - Violet clair      #A98BFF (liens dans le texte, plus lisible
-                       sur fond sombre : contraste supérieur à 4,5:1)
-   - Texte principal   #F5F5F7
-   - Texte secondaire  #A0A3B1
-   ========================================================= */
+   Couleurs :
+   #0D0D12 fond de page / #15151C fond des cartes / #24242E bordures
+   #7C4DFF violet / #A98BFF violet clair (liens)
+   #F5F5F7 texte / #A0A3B1 texte secondaire
+   ========================================= */
 
 
-/* ---------- Polices hébergées avec le site ---------- */
+/* ---------- Polices ---------- */
 
 @font-face {
     font-family: "Montserrat";
     src: url("../fonts/montserrat-latin-600-normal.woff2") format("woff2");
     font-weight: 600;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -29,7 +23,6 @@
     font-family: "Poppins";
     src: url("../fonts/poppins-latin-200-normal.woff2") format("woff2");
     font-weight: 200;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -37,12 +30,11 @@
     font-family: "Poppins";
     src: url("../fonts/poppins-latin-300-normal.woff2") format("woff2");
     font-weight: 300;
-    font-style: normal;
     font-display: swap;
 }
 
 
-/* ---------- Base ---------- */
+/* ---------- Général ---------- */
 
 * {
     box-sizing: border-box;
@@ -60,7 +52,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -76,6 +69,11 @@ h3 {
     margin: 0 0 1rem;
 }
 
+h4 {
+    font-size: 1.05rem;
+    margin: 2rem 0 0.75rem;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -89,9 +87,8 @@ a:hover {
     color: #F5F5F7;
 }
 
-/* Contour bien visible quand on navigue au clavier */
-a:focus-visible,
-button:focus-visible {
+/* contour visible quand on navigue au clavier */
+a:focus {
     outline: 2px solid #A98BFF;
     outline-offset: 3px;
 }
@@ -100,7 +97,6 @@ ul {
     padding-left: 1.2rem;
 }
 
-/* Conteneur centré qui limite la largeur du contenu */
 .conteneur {
     max-width: 1100px;
     margin: 0 auto;
@@ -118,6 +114,7 @@ ul {
     border-bottom: 1px solid #24242E;
 }
 
+/* le nom à gauche, le menu à droite (le menu passe dessous sur mobile) */
 .entete-contenu {
     display: flex;
     justify-content: space-between;
@@ -138,7 +135,7 @@ ul {
     text-decoration: none;
 }
 
-/* Le petit point violet à gauche du nom */
+/* point violet devant le nom */
 .point {
     display: inline-block;
     width: 0.7rem;
@@ -147,37 +144,13 @@ ul {
     background-color: #7C4DFF;
 }
 
-.bouton-menu {
-    background-color: transparent;
-    color: #F5F5F7;
-    border: 1px solid #24242E;
-    border-radius: 999px;
-    padding: 0.4rem 1rem;
-    font-family: "Poppins", Arial, sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* Sur mobile, le menu passe sur une nouvelle ligne, sous le nom et le bouton */
-.menu {
-    width: 100%;
-}
-
-/* Sur mobile, la liste est cachée tant qu'on n'a pas cliqué sur "Menu" */
 .menu-liste {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
     list-style: none;
-    margin: 1rem 0 0;
+    margin: 0.75rem 0 0;
     padding: 0;
-}
-
-/* La classe "ouvert" est ajoutée au menu par le JavaScript */
-.ouvert .menu-liste {
-    display: block;
-}
-
-.menu-liste li {
-    padding: 0.4rem 0;
 }
 
 .menu-liste a {
@@ -191,7 +164,7 @@ ul {
     color: #F5F5F7;
 }
 
-/* Page active : texte clair et souligné violet */
+/* page en cours */
 .actif {
     color: #F5F5F7;
     border-bottom: 2px solid #7C4DFF;
@@ -217,11 +190,21 @@ ul {
     padding: 1.5rem;
 }
 
-/* Petit trait violet sous les titres de cartes */
-.carte h3 {
+/* trait violet sous le titre des cartes */
+.carte h3,
+.titre-carte {
     display: inline-block;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #7C4DFF;
+}
+
+.titre-carte {
+    font-size: 1.15rem;
+    margin: 0 0 1rem;
+}
+
+.carte h4 {
+    margin-top: 0;
 }
 
 .carte p {
@@ -232,13 +215,29 @@ ul {
     margin: 0;
 }
 
+.carte-violette {
+    border-color: #7C4DFF;
+}
+
 .date {
     color: #A0A3B1;
     font-size: 0.95rem;
 }
 
+/* petites pastilles C1, C2... */
+.etiquette {
+    display: inline-block;
+    border: 1px solid #7C4DFF;
+    border-radius: 999px;
+    padding: 0.1rem 0.8rem;
+    color: #A98BFF;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 
-/* ---------- Boutons en forme de pilule ---------- */
+
+/* ---------- Boutons ---------- */
 
 .boutons {
     display: flex;
@@ -264,7 +263,6 @@ ul {
     color: #F5F5F7;
 }
 
-/* Variante avec seulement le contour violet */
 .bouton-contour {
     background-color: transparent;
     color: #F5F5F7;
@@ -275,7 +273,7 @@ ul {
 }
 
 
-/* ---------- Accueil ---------- */
+/* ---------- Haut des pages ---------- */
 
 .accueil {
     padding: 3.5rem 0;
@@ -287,7 +285,6 @@ ul {
     margin: 0;
 }
 
-/* Grand titre de l'accueil en violet (texte de grande taille : contraste suffisant) */
 .accueil h1 {
     color: #7C4DFF;
     font-size: clamp(2.2rem, 7vw, 4rem);
@@ -299,8 +296,22 @@ ul {
     margin: 0;
 }
 
+/* logo à côté du nom de l'école */
+.etablissement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
 
-/* ---------- Titre des pages intérieures ---------- */
+.etablissement p {
+    margin: 0;
+}
+
+.logo-etablissement {
+    width: 5.5rem;
+    border-radius: 14px;
+}
 
 .titre-page {
     padding: 3rem 0;
@@ -313,28 +324,9 @@ ul {
 }
 
 
-/* ---------- Étiquettes (C1 à C6, "Mon option") ---------- */
-
-.etiquette {
-    display: inline-block;
-    border: 1px solid #7C4DFF;
-    border-radius: 999px;
-    padding: 0.1rem 0.8rem;
-    color: #A98BFF;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-/* Carte mise en avant avec une bordure violette (mon option SISR) */
-.carte-mise-en-avant {
-    border-color: #7C4DFF;
-}
-
-
 /* ---------- Tableau de synthèse ---------- */
 
-/* Sur mobile, le tableau est plus large que l'écran : il défile dans son conteneur */
+/* sur mobile le tableau est trop large : on peut le faire glisser */
 .tableau-defilement {
     overflow-x: auto;
     margin-bottom: 1.5rem;
@@ -354,7 +346,6 @@ ul {
     padding: 1rem;
     text-align: left;
     color: #A0A3B1;
-    font-size: 0.95rem;
 }
 
 .tableau th,
@@ -365,12 +356,9 @@ ul {
 }
 
 .tableau thead th {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 600;
     background-color: #0D0D12;
 }
 
-/* Première colonne : le nom de la réalisation, aligné à gauche */
 .tableau tbody th,
 .tableau .colonne-realisation {
     width: 40%;
@@ -384,57 +372,7 @@ ul {
 }
 
 
-/* ---------- Filtre des projets par compétence ---------- */
-
-.filtres {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 2rem;
-}
-
-.filtre {
-    background-color: transparent;
-    color: #F5F5F7;
-    border: 1px solid #7C4DFF;
-    border-radius: 999px;
-    padding: 0.4rem 1.1rem;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-}
-
-.filtre:hover {
-    background-color: #24242E;
-}
-
-/* Bouton du filtre sélectionné (classe ajoutée par le JavaScript) */
-.filtre-actif,
-.filtre-actif:hover {
-    background-color: #7C4DFF;
-    color: #FFFFFF;
-}
-
-/* Grille des projets : avec auto-fill, les colonnes vides gardent leur place.
-   Une carte seule après un filtre ne s'étire donc pas sur toute la largeur. */
-.grille-projets {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-/* Élément masqué par le JavaScript */
-.cache {
-    display: none;
-}
-
-.liste-etiquettes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-}
-
-
-/* ---------- Fiches projets et missions ---------- */
+/* ---------- Fiches (projets et missions) ---------- */
 
 .fiche {
     border-top: 1px solid #24242E;
@@ -444,30 +382,19 @@ ul {
     margin-top: 2.5rem;
 }
 
-/* Titres des 7 parties de la fiche, avec le trait violet */
 .fiche-partie h3 {
     display: inline-block;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #7C4DFF;
 }
 
-h4 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin: 2rem 0 0.75rem;
+.liste-etiquettes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
-.carte h4 {
-    margin-top: 0;
-}
-
-.fiche h4 .etiquette {
-    margin-left: 0.4rem;
-    font-size: 0.8rem;
-}
-
-/* Blocs de commandes et de code */
+/* commandes et code */
 .code {
     background-color: #15151C;
     border: 1px solid #24242E;
@@ -479,11 +406,10 @@ h4 {
 }
 
 code {
-    font-family: Consolas, Menlo, "Courier New", monospace;
-    color: #F5F5F7;
+    font-family: Consolas, "Courier New", monospace;
 }
 
-/* Images avec leur légende */
+/* images avec légende */
 .figure {
     margin: 1.5rem 0;
 }
@@ -500,12 +426,12 @@ code {
     font-size: 0.95rem;
 }
 
-/* Image en hauteur (photo) : on limite sa largeur */
-.figure-etroite {
+/* pour les photos en hauteur */
+.photo-hauteur {
     max-width: 360px;
 }
 
-/* Liste d'outils affichée en pastilles */
+/* outils en pastilles */
 .liste-outils {
     display: flex;
     flex-wrap: wrap;
@@ -524,24 +450,15 @@ code {
 
 /* ---------- Page Stages ---------- */
 
-/* Fiche d'identité de l'entreprise : un libellé au-dessus de chaque information */
 .infos {
     list-style: none;
     padding: 0;
     margin: 0 0 1.5rem;
-    background-color: #15151C;
-    border: 1px solid #24242E;
-    border-radius: 14px;
 }
 
 .infos li {
-    padding: 0.8rem 1.25rem;
-    border-top: 1px solid #24242E;
-}
-
-/* Pas de bordure au-dessus de la première ligne */
-.infos li:first-child {
-    border-top: none;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #24242E;
 }
 
 .libelle {
@@ -550,7 +467,6 @@ code {
     font-size: 0.9rem;
 }
 
-/* Chaque mission est séparée par un trait */
 .mission {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -561,7 +477,6 @@ code {
     font-size: 1.35rem;
 }
 
-/* Titres des 7 points d'une fiche de mission, avec le trait violet */
 .mission .fiche-partie h4 {
     display: inline-block;
     margin-top: 0;
@@ -569,10 +484,10 @@ code {
     border-bottom: 2px solid #7C4DFF;
 }
 
-/* Circuit d'un ticket : les étapes sont empilées sur mobile, en ligne sur grand écran */
+/* les 5 étapes d'un ticket */
 .circuit {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.75rem;
     list-style: none;
     padding: 0;
@@ -580,8 +495,6 @@ code {
 }
 
 .circuit li {
-    flex-grow: 1;
-    flex-basis: 0;
     background-color: #15151C;
     border: 1px solid #24242E;
     border-top: 3px solid #7C4DFF;
@@ -596,16 +509,13 @@ code {
     color: #F5F5F7;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 600;
-    margin-bottom: 0.3rem;
 }
 
 
-/* ---------- Page Veille : une actualité = une date + un contenu ---------- */
+/* ---------- Page Veille ---------- */
 
-/* Sur mobile, la date est au-dessus du contenu */
 .actualite {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
     margin-bottom: 1.5rem;
     background-color: #15151C;
@@ -622,44 +532,12 @@ code {
     font-size: 1.1rem;
 }
 
-.actualite-contenu h3 {
+.actualite h3 {
     margin-top: 0.75rem;
 }
 
-.actualite-contenu p {
+.actualite p {
     margin: 0 0 0.75rem;
-}
-
-
-/* ---------- Page Mentions légales ---------- */
-
-/* Titres h2 dans les cartes : même style que les titres de cartes h3 */
-.titre-carte {
-    display: inline-block;
-    font-size: 1.15rem;
-    margin: 0 0 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #7C4DFF;
-}
-
-
-/* ---------- Logo de l'établissement (accueil) ---------- */
-
-.etablissement {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.etablissement p {
-    margin: 0;
-}
-
-.logo-etablissement {
-    width: 5.5rem;
-    height: auto;
-    border-radius: 14px;
 }
 
 
@@ -686,7 +564,7 @@ code {
 }
 
 
-/* ---------- Bouton "Retour en haut" ---------- */
+/* ---------- Bouton retour en haut ---------- */
 
 .retour-haut {
     position: fixed;
@@ -710,30 +588,13 @@ code {
 }
 
 
-/* =========================================================
-   Tablette : à partir de 768 px
-   ========================================================= */
+/* ========== Tablette (768px et plus) ========== */
 
 @media (min-width: 768px) {
 
-    /* Le bouton "Menu" n'est plus utile : les liens sont toujours visibles */
-    .bouton-menu {
-        display: none;
-    }
-
-    .menu {
-        width: auto;
-    }
-
-    .menu-liste,
-    .ouvert .menu-liste {
-        display: flex;
-        gap: 1.5rem;
+    .menu-liste {
         margin: 0;
-    }
-
-    .menu-liste li {
-        padding: 0;
+        gap: 1.5rem;
     }
 
     .section {
@@ -748,7 +609,6 @@ code {
         padding: 5rem 0;
     }
 
-    /* Le tableau tient en entier : plus besoin de l'indication de défilement */
     .indication-mobile {
         display: none;
     }
@@ -770,9 +630,7 @@ code {
 }
 
 
-/* =========================================================
-   Ordinateur : à partir de 1024 px
-   ========================================================= */
+/* ========== Ordinateur (1024px et plus) ========== */
 
 @media (min-width: 1024px) {
 
@@ -788,24 +646,13 @@ code {
         max-width: 75%;
     }
 
-    /* Actualités de veille : la date à gauche, le contenu à droite */
-    .actualite {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .actualite-date {
-        flex-basis: 8rem;
-        flex-shrink: 0;
-    }
-
-    /* Les étapes du circuit d'un ticket passent sur une seule ligne */
-    .circuit {
-        flex-direction: row;
-    }
-
-    /* Lignes de texte moins longues dans les fiches, plus faciles à lire */
     .fiche-partie {
         max-width: 850px;
+    }
+
+    /* la date à gauche, l'article à droite */
+    .actualite {
+        grid-template-columns: 8rem 1fr;
+        gap: 2rem;
     }
 }

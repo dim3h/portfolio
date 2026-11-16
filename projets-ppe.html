@@ -6,7 +6,7 @@
     <title>Projets PPE | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
     <meta name="description" content="Mes projets en BTS SIO SISR : un cluster Proxmox à deux serveurs avec une baie SAN en RAID 5 et multipath, puis la conception de ce portfolio.">
 
-    <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
+    <!-- Aperçu pour LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:title" content="Projets PPE | Mehdi REZZAOUI">
@@ -17,15 +17,13 @@
 </head>
 <body>
 
-    <!-- ===== En-tête et menu (identique sur toutes les pages) ===== -->
+    <!-- En-tête -->
     <header class="entete" id="haut">
         <div class="conteneur entete-contenu">
             <a href="index.html" class="nom-site"><span class="point"></span>Mehdi REZZAOUI</a>
 
-            <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-
-            <nav class="menu" id="menu" aria-label="Menu principal">
-                <ul class="menu-liste" id="menu-liste">
+            <nav>
+                <ul class="menu-liste">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="bts-competences.html">BTS et compétences</a></li>
                     <li><a href="projets-ppe.html" class="actif" aria-current="page">Projets PPE</a></li>
@@ -38,7 +36,7 @@
 
     <main>
 
-        <!-- ===== Titre de la page ===== -->
+        <!-- Titre de la page -->
         <section class="titre-page">
             <div class="conteneur">
                 <h1>Mes projets PPE</h1>
@@ -46,48 +44,31 @@
             </div>
         </section>
 
-        <!-- ===== Liste des projets avec le filtre par compétence ===== -->
+        <!-- Liste des projets -->
         <section class="section" id="liste-projets">
             <div class="conteneur">
-                <h2>Filtrer par compétence</h2>
-
-                <!-- Chaque bouton a une valeur (value) : le JavaScript l'utilise pour filtrer -->
-                <div class="filtres">
-                    <button class="filtre filtre-actif" type="button" value="toutes" aria-pressed="true">Toutes</button>
-                    <button class="filtre" type="button" value="c1" aria-pressed="false">C1</button>
-                    <button class="filtre" type="button" value="c2" aria-pressed="false">C2</button>
-                    <button class="filtre" type="button" value="c3" aria-pressed="false">C3</button>
-                    <button class="filtre" type="button" value="c4" aria-pressed="false">C4</button>
-                    <button class="filtre" type="button" value="c5" aria-pressed="false">C5</button>
-                    <button class="filtre" type="button" value="c6" aria-pressed="false">C6</button>
-                </div>
-
-                <!-- Les classes c1 à c6 de chaque carte indiquent les compétences du projet -->
-                <div class="grille grille-projets">
-                    <article class="carte carte-projet c1 c4 c5">
+                <h2>Mes projets</h2>
+                <div class="grille">
+                    <article class="carte">
                         <h3>Monter un cluster Proxmox avec une baie SAN</h3>
                         <p class="date">PPE de 1re année, de mars à mai 2026</p>
                         <p>Projet réalisé en équipe de quatre étudiants : deux serveurs Proxmox VE réunis en cluster, avec un stockage partagé en RAID 5 sur une baie SAN et le multipath.</p>
                         <p class="liste-etiquettes"><span class="etiquette">C1</span> <span class="etiquette">C4</span> <span class="etiquette">C5</span></p>
                         <p><a href="#proxmox">Lire la fiche du projet</a></p>
                     </article>
-                    <article class="carte carte-projet c3 c4 c6">
+                    <article class="carte">
                         <h3>Mon portfolio</h3>
                         <p class="date">Projet de 2e année, 2026-2027, seul</p>
-                        <p>La conception et le développement de ce site, en HTML, CSS et JavaScript sans framework, puis sa mise en ligne sur GitHub Pages.</p>
+                        <p>La conception et le développement de ce site, en HTML et CSS sans framework, puis sa mise en ligne sur GitHub Pages.</p>
                         <p class="liste-etiquettes"><span class="etiquette">C3</span> <span class="etiquette">C4</span> <span class="etiquette">C6</span></p>
                         <p><a href="#portfolio">Lire la fiche du projet</a></p>
                     </article>
                 </div>
-
-                <!-- Message affiché par le JavaScript quand aucun projet ne correspond -->
-                <p class="cache texte-secondaire" id="aucun-projet">Aucun projet PPE ne mobilise cette compétence pour l'instant. Elle est illustrée sur la page <a href="stages.html">Stages</a>.</p>
+                <p class="texte-secondaire">Les compétences de tous mes projets et de mes stages sont regroupées dans le <a href="bts-competences.html#synthese">tableau de synthèse</a>.</p>
             </div>
         </section>
 
-        <!-- =====================================================
-             Fiche 1 : cluster Proxmox avec baie SAN
-             ===================================================== -->
+        <!-- Fiche 1 : cluster Proxmox avec baie SAN -->
         <article class="section fiche" id="proxmox">
             <div class="conteneur">
                 <p class="etiquette">PPE de 1re année, mars à mai 2026</p>
@@ -116,7 +97,7 @@
                     <h3>3. Travail réalisé</h3>
 
                     <div class="grille">
-                        <div class="carte carte-mise-en-avant">
+                        <div class="carte carte-violette">
                             <h4>Mon rôle dans l'équipe</h4>
                             <ul>
                                 <li>L'installation physique de l'infrastructure</li>
@@ -134,8 +115,8 @@
                         </div>
                     </div>
 
-                    <figure class="figure figure-etroite">
-                        <img src="img/proxmox-baie-brassage.webp" alt="Baie de brassage noire vue de face, avec les deux serveurs en haut, les switches au milieu et la baie SAN en bas, reliés par des câbles réseau et SAN" width="718" height="956" loading="lazy">
+                    <figure class="figure photo-hauteur">
+                        <img src="img/proxmox-baie-brassage.webp" alt="Baie de brassage noire vue de face, avec les deux serveurs en haut, les switches au milieu et la baie SAN en bas, reliés par des câbles réseau et SAN" width="718" height="956">
                         <figcaption>La baie de brassage avec les serveurs, les switches et la baie SAN.</figcaption>
                     </figure>
 
@@ -163,12 +144,12 @@ pvecm status</code></pre>
                     <p>Nous avons configuré la baie SAN avec le logiciel Dell PowerVault Modular Disk Storage Manager. Nous avons paramétré l'adresse de gestion, supprimé les anciennes configurations RAID, puis créé deux groupes RAID 5, nommés RAID5_10k (5 disques) et RAID5_15k (10 disques). Le RAID 5 permet de perdre un disque sans perdre de données. Nous avons ensuite déclaré les deux serveurs dans la baie, dans un groupe d'hôtes, pour leur donner accès au stockage.</p>
 
                     <figure class="figure">
-                        <img src="img/proxmox-baie-disques.webp" alt="Vue de face de la baie SAN : à gauche les emplacements vides, au centre le groupe de 5 disques encadré en rouge, à droite le groupe de 10 disques encadré en jaune" width="952" height="202" loading="lazy">
+                        <img src="img/proxmox-baie-disques.webp" alt="Vue de face de la baie SAN : à gauche les emplacements vides, au centre le groupe de 5 disques encadré en rouge, à droite le groupe de 10 disques encadré en jaune" width="952" height="202">
                         <figcaption>Répartition des disques dans la baie : le groupe 10K en rouge, le groupe 15K en jaune.</figcaption>
                     </figure>
 
                     <figure class="figure">
-                        <img src="img/proxmox-raid5.webp" alt="Capture du logiciel Dell PowerVault Modular Disk Storage Manager montrant le groupe de disques RAID5_15k en état optimal, niveau de RAID 5, interface SAS" width="1158" height="819" loading="lazy">
+                        <img src="img/proxmox-raid5.webp" alt="Capture du logiciel Dell PowerVault Modular Disk Storage Manager montrant le groupe de disques RAID5_15k en état optimal, niveau de RAID 5, interface SAS" width="1158" height="819">
                         <figcaption>Le groupe de disques RAID5_15k dans Dell PowerVault Modular Disk Storage Manager, pendant la configuration.</figcaption>
                     </figure>
 
@@ -263,9 +244,7 @@ pvscan --cache</code></pre>
             </div>
         </article>
 
-        <!-- =====================================================
-             Fiche 2 : mon portfolio
-             ===================================================== -->
+        <!-- Fiche 2 : mon portfolio -->
         <article class="section fiche" id="portfolio">
             <div class="conteneur">
                 <p class="etiquette">Projet de 2e année, 2026-2027</p>
@@ -276,7 +255,7 @@ pvscan --cache</code></pre>
                     <p>Le portfolio est le support de l'épreuve E5 du BTS SIO, « Support et mise à disposition de services informatiques ». Il est aussi évalué en cours. Je réalise ce projet seul, pour un client : mon enseignant, M. Armand, qui valide chaque livraison.</p>
                     <p>Mon cahier des charges du 25/09/2026 fixe plusieurs contraintes :</p>
                     <ul>
-                        <li>un site en HTML et CSS écrits à la main, sans framework, avec un peu de JavaScript seulement ;</li>
+                        <li>un site en HTML et CSS écrits à la main, sans framework ;</li>
                         <li>un affichage correct sur Chrome, Firefox, Edge et Safari, sur ordinateur et sur smartphone ;</li>
                         <li>un hébergement gratuit sur GitHub Pages, en HTTPS ;</li>
                         <li>un code valide au validateur du W3C et un score Lighthouse d'au moins 90 ;</li>
@@ -291,7 +270,7 @@ pvscan --cache</code></pre>
                     <ul>
                         <li>mon parcours et mon projet de poursuite d'études ;</li>
                         <li>le BTS SIO, les six compétences du bloc 1 et un tableau de synthèse ;</li>
-                        <li>mes projets et mes missions de stage, chacun dans une fiche en sept points, avec un filtre par compétence ;</li>
+                        <li>mes projets et mes missions de stage, chacun dans une fiche en sept points ;</li>
                         <li>ma veille technologique, avec au moins une actualité par mois.</li>
                     </ul>
                 </section>
@@ -305,11 +284,11 @@ pvscan --cache</code></pre>
 
                     <div class="grille">
                         <figure class="figure">
-                            <img src="img/portfolio-maquette-accueil.webp" alt="Maquette en gris de la page d'accueil : menu en haut, emplacement de la photo, nom, formation, logo de l'établissement, puis blocs présentation, objectif et perspectives" width="1200" height="857" loading="lazy">
+                            <img src="img/portfolio-maquette-accueil.webp" alt="Maquette en gris de la page d'accueil : menu en haut, emplacement de la photo, nom, formation, logo de l'établissement, puis blocs présentation, objectif et perspectives" width="1200" height="857">
                             <figcaption>Maquette de la page d'accueil.</figcaption>
                         </figure>
                         <figure class="figure">
-                            <img src="img/portfolio-maquette-fiche.webp" alt="Maquette en gris d'une fiche de projet : titre, étiquettes de compétences, les sept points à gauche et les illustrations à droite" width="1200" height="857" loading="lazy">
+                            <img src="img/portfolio-maquette-fiche.webp" alt="Maquette en gris d'une fiche de projet : titre, étiquettes de compétences, les sept points à gauche et les illustrations à droite" width="1200" height="857">
                             <figcaption>Maquette d'une fiche en sept points.</figcaption>
                         </figure>
                     </div>
@@ -317,7 +296,7 @@ pvscan --cache</code></pre>
                     <p>Pendant la conception, j'ai fait évoluer les couleurs prévues dans le cahier des charges : le fond bleu nuit est devenu presque noir et le violet a remplacé le bleu. Je l'ai signalé dans le dossier comme une demande de changement.</p>
 
                     <figure class="figure">
-                        <img src="img/portfolio-charte-accueil.webp" alt="Aperçu de la page d'accueil avec la charte sombre : fond presque noir, nom en violet, cartes gris foncé et bouton violet" width="1200" height="895" loading="lazy">
+                        <img src="img/portfolio-charte-accueil.webp" alt="Aperçu de la page d'accueil avec la charte sombre : fond presque noir, nom en violet, cartes gris foncé et bouton violet" width="1200" height="895">
                         <figcaption>Aperçu de la charte graphique appliquée à la page d'accueil, dans le dossier de conception.</figcaption>
                     </figure>
 
@@ -335,14 +314,7 @@ pvscan --cache</code></pre>
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }</code></pre>
-                    <p>Le filtre de cette page est écrit en JavaScript. Chaque carte porte les classes de ses compétences (<code>c1</code>, <code>c4</code>...), et le script cache les cartes qui n'ont pas la compétence choisie :</p>
-                    <pre class="code"><code>projets.forEach(function (projet) {
-    if (competence === "toutes" || projet.classList.contains(competence)) {
-        projet.classList.remove("cache");
-    } else {
-        projet.classList.add("cache");
-    }
-});</code></pre>
+                    <p>Mon cahier des charges prévoyait un peu de JavaScript, pour le menu sur mobile et pour un filtre des projets par compétence. J'ai finalement choisi de ne pas en utiliser, parce que je ne le maîtrise pas assez pour l'expliquer. Sur mobile, les liens du menu passent simplement à la ligne, et les compétences de chaque projet sont affichées sur sa carte et dans le tableau de synthèse.</p>
 
                     <h4>Le planning</h4>
                     <p>Mon planning fixe les jalons suivants :</p>
@@ -362,7 +334,6 @@ pvscan --cache</code></pre>
                     <ul class="liste-outils">
                         <li>HTML5</li>
                         <li>CSS3 (Flexbox, Grid, media queries)</li>
-                        <li>JavaScript</li>
                         <li>Git et GitHub</li>
                         <li>GitHub Pages</li>
                         <li>Validateur du W3C</li>
@@ -376,7 +347,7 @@ pvscan --cache</code></pre>
                     <h3>5. Compétences mobilisées</h3>
                     <ul>
                         <li><a href="bts-competences.html#c3">C3 Développer la présence en ligne de l'organisation</a> : je crée et je fais évoluer un site web, je soigne son référencement (titres, descriptions, sitemap.xml, balises Open Graph) et je respecte le cadre juridique (mentions légales, aucune donnée collectée, informations confidentielles masquées).</li>
-                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : j'ai rédigé un cahier des charges et un dossier de conception, je suis un planning avec des jalons, et je signale les écarts, comme le changement de couleurs.</li>
+                        <li><a href="bts-competences.html#c4">C4 Travailler en mode projet</a> : j'ai rédigé un cahier des charges et un dossier de conception, je suis un planning avec des jalons, et je signale les écarts, comme le changement de couleurs ou l'abandon du JavaScript.</li>
                         <li><a href="bts-competences.html#c6">C6 Organiser son développement professionnel</a> : le portfolio construit mon identité professionnelle, présente ma veille et mon projet de poursuite d'études.</li>
                     </ul>
                     <p>Voir le <a href="bts-competences.html#synthese">tableau de synthèse des compétences</a>.</p>
@@ -384,7 +355,7 @@ pvscan --cache</code></pre>
 
                 <section class="fiche-partie">
                     <h3>6. Résultats obtenus</h3>
-                    <p>Le résultat, c'est ce site : six pages, un affichage adapté au smartphone, à la tablette et à l'ordinateur, un filtre par compétence et un tableau de synthèse.</p>
+                    <p>Le résultat, c'est ce site : six pages, un affichage adapté au smartphone, à la tablette et à l'ordinateur, et un tableau de synthèse qui relie chaque réalisation à ses compétences.</p>
                     <p>Livrables : le cahier des charges, le dossier de conception, puis chaque version du site (V1 en archive .zip, puis le site en ligne pour la V2 et la V3).</p>
                 </section>
 
@@ -401,7 +372,7 @@ pvscan --cache</code></pre>
 
     </main>
 
-    <!-- ===== Pied de page (identique sur toutes les pages) ===== -->
+    <!-- Pied de page -->
     <footer class="pied">
         <div class="conteneur">
             <ul class="pied-liens">
@@ -413,9 +384,8 @@ pvscan --cache</code></pre>
         </div>
     </footer>
 
-    <!-- Bouton "Retour en haut" : simple lien vers l'en-tête -->
+    <!-- Retour en haut -->
     <a href="#haut" class="retour-haut" aria-label="Retour en haut de la page">↑</a>
 
-    <script src="js/main.js"></script>
 </body>
 </html>

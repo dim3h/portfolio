@@ -6,7 +6,7 @@
     <title>Stages | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
     <meta name="description" content="Mes stages de BTS SIO SISR : support utilisateurs et réseau au Centre Hospitalier Ardèche Nord, puis refonte de pages web chez MKS Performance.">
 
-    <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
+    <!-- Aperçu pour LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:title" content="Stages | Mehdi REZZAOUI">
@@ -17,15 +17,13 @@
 </head>
 <body>
 
-    <!-- ===== En-tête et menu (identique sur toutes les pages) ===== -->
+    <!-- En-tête -->
     <header class="entete" id="haut">
         <div class="conteneur entete-contenu">
             <a href="index.html" class="nom-site"><span class="point"></span>Mehdi REZZAOUI</a>
 
-            <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-
-            <nav class="menu" id="menu" aria-label="Menu principal">
-                <ul class="menu-liste" id="menu-liste">
+            <nav>
+                <ul class="menu-liste">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="bts-competences.html">BTS et compétences</a></li>
                     <li><a href="projets-ppe.html">Projets PPE</a></li>
@@ -38,7 +36,7 @@
 
     <main>
 
-        <!-- ===== Titre de la page ===== -->
+        <!-- Titre de la page -->
         <section class="titre-page">
             <div class="conteneur">
                 <h1>Mes stages</h1>
@@ -46,7 +44,7 @@
             </div>
         </section>
 
-        <!-- ===== Liste des stages ===== -->
+        <!-- Liste des stages -->
         <section class="section" id="liste-stages">
             <div class="conteneur">
                 <h2>Mes stages en entreprise</h2>
@@ -74,9 +72,7 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             Stage 1 : Centre Hospitalier Ardèche Nord
-             ===================================================== -->
+        <!-- Stage 1 : Centre Hospitalier Ardèche Nord -->
         <section class="section fiche" id="chan">
             <div class="conteneur">
                 <p class="etiquette">Stage de 1re année</p>
@@ -95,8 +91,8 @@
                     <p>Contexte : le service informatique fait en sorte que tous les outils numériques du personnel restent disponibles. Dans un hôpital, la moindre panne d'un poste ou d'un accès peut avoir un impact direct sur la prise en charge des patients.</p>
                     <p>Ma place dans le service : j'étais rattaché à l'équipe de support et encadré par les techniciens du service.</p>
 
-                    <figure class="figure figure-etroite">
-                        <img src="img/chan-baie-reseau.webp" alt="Baie réseau du service informatique avec des switches et des serveurs reliés par de nombreux câbles réseau et fibres, les étiquettes d'identification étant masquées par des rectangles noirs" width="625" height="833" loading="lazy">
+                    <figure class="figure photo-hauteur">
+                        <img src="img/chan-baie-reseau.webp" alt="Baie réseau du service informatique avec des switches et des serveurs reliés par de nombreux câbles réseau et fibres, les étiquettes d'identification étant masquées par des rectangles noirs" width="625" height="833">
                         <figcaption>Une baie réseau gérée par le service informatique, avec les éléments identifiants masqués.</figcaption>
                     </figure>
                 </div>
@@ -119,7 +115,7 @@
                         <h4>3. Travail réalisé</h4>
                         <p>Chaque demande suit le même circuit, de sa création à sa clôture :</p>
 
-                        <!-- Circuit d'un ticket : une liste numérotée mise en forme avec Flexbox -->
+                        <!-- Les étapes d'un ticket -->
                         <ol class="circuit">
                             <li><span class="circuit-titre">Création</span> Par l'utilisateur ou un membre de l'équipe, suite à un appel</li>
                             <li><span class="circuit-titre">Qualification et priorisation</span> Nature du problème, urgence</li>
@@ -221,9 +217,7 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             Stage 2 : MKS Performance
-             ===================================================== -->
+        <!-- Stage 2 : MKS Performance -->
         <section class="section fiche" id="mks">
             <div class="conteneur">
                 <p class="etiquette">Stage de 1re année</p>
@@ -306,7 +300,7 @@
 
     </main>
 
-    <!-- ===== Pied de page (identique sur toutes les pages) ===== -->
+    <!-- Pied de page -->
     <footer class="pied">
         <div class="conteneur">
             <ul class="pied-liens">
@@ -318,9 +312,8 @@
         </div>
     </footer>
 
-    <!-- Bouton "Retour en haut" : simple lien vers l'en-tête -->
+    <!-- Retour en haut -->
     <a href="#haut" class="retour-haut" aria-label="Retour en haut de la page">↑</a>
 
-    <script src="js/main.js"></script>
 </body>
 </html>
