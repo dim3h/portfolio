@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique | Mehdi REZZAOUI | Portfolio BTS SIO SISR</title>
+    <meta name="description" content="Ma veille technologique en BTS SIO SISR : l'IA au service de l'administration système (AIOps), état de l'art et actualités suivies chaque mois.">
+
+    <!-- Aperçu du lien quand on le partage (LinkedIn, messageries) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Veille technologique | Mehdi REZZAOUI">
+    <meta property="og:description" content="Ma veille technologique en BTS SIO SISR : l'IA au service de l'administration système (AIOps), état de l'art et actualités suivies chaque mois.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== En-tête et menu (identique sur toutes les pages) ===== -->
+    <header class="entete" id="haut">
+        <div class="conteneur entete-contenu">
+            <a href="index.html" class="nom-site"><span class="point"></span>Mehdi REZZAOUI</a>
+
+            <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+            <nav class="menu" id="menu" aria-label="Menu principal">
+                <ul class="menu-liste" id="menu-liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="bts-competences.html">BTS et compétences</a></li>
+                    <li><a href="projets-ppe.html">Projets PPE</a></li>
+                    <li><a href="stages.html">Stages</a></li>
+                    <li><a href="veille.html" class="actif" aria-current="page">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== Titre de la page ===== -->
+        <section class="titre-page">
+            <div class="conteneur">
+                <h1>Veille technologique</h1>
+                <p class="texte-large texte-secondaire">Mon sujet : l'IA au service de l'administration système (AIOps). Je présente ici pourquoi je l'ai choisi, ce que j'en savais au départ et les actualités que je suis chaque mois.</p>
+                <div class="boutons">
+                    <a href="#actualites" class="bouton">Voir les actualités</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Le sujet ===== -->
+        <section class="section" id="sujet">
+            <div class="conteneur">
+                <h2>Le sujet</h2>
+                <div class="grille">
+                    <article class="carte">
+                        <h3>L'IA au service de l'administration système</h3>
+                        <p>Ma veille porte sur la façon dont l'intelligence artificielle aide à administrer les serveurs et les réseaux : la supervision intelligente, la détection d'anomalies, l'automatisation des tâches, et plus largement l'AIOps. Je suis aussi les risques que l'IA apporte à ces systèmes, du point de vue de l'administrateur qui doit les surveiller et les protéger.</p>
+                    </article>
+                    <article class="carte">
+                        <h3>Pourquoi ce choix</h3>
+                        <p>En informatique, ce qui me plaît le plus, ce sont les réseaux, les systèmes et le cloud, et l'IA change beaucoup la façon de les administrer et de les protéger. En SISR, je vais gérer des serveurs, des réseaux et des machines virtuelles : ce sujet me concerne directement.</p>
+                        <p>Pendant mon stage à l'hôpital, je traitais des tickets d'incident et je vérifiais chaque matin les voyants des salles serveur. L'AIOps cherche justement à automatiser la détection, le tri et l'analyse de ce type d'alertes. Ce sujet est aussi en lien avec mon projet de poursuite d'études en licence professionnelle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== État de l'art ===== -->
+        <section class="section" id="etat-de-l-art">
+            <div class="conteneur">
+                <h2>L'état de l'art au départ</h2>
+                <div class="texte-large">
+                    <p>L'AIOps (Artificial Intelligence for IT Operations) consiste à utiliser l'intelligence artificielle, l'analyse de grandes quantités de données et l'apprentissage automatique pour repérer et résoudre automatiquement les problèmes informatiques courants.</p>
+                    <p>Concrètement, les outils d'AIOps font le lien entre les alertes, détectent les anomalies, recherchent la cause d'un incident et peuvent déclencher une action corrective. L'objectif n'est pas de remplacer les techniciens : c'est de leur éviter les tâches répétitives et la « fatigue des alertes ».</p>
+                    <p>Il y a aussi des limites : les résultats dépendent de la qualité des données, la mise en place est complexe, et il faut pouvoir faire confiance aux outils avant de les laisser agir seuls.</p>
+                    <p class="texte-secondaire">Sources : <a href="https://www.lemagit.fr/definition/AIOps-intelligence-artificielle-dediee-aux-operations-informatiques" target="_blank" rel="noopener">LeMagIT, « AIOps (intelligence artificielle dédiée aux opérations informatiques) » (nouvel onglet)</a> et <a href="https://www.canopsis.fr/aiops-lintelligence-artificielle-au-service-de-vos-operations-it/" target="_blank" rel="noopener">Canopsis, « AIOps : l'intelligence artificielle au service de vos opérations IT » (nouvel onglet)</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Actualités, de la plus récente à la plus ancienne ===== -->
+        <section class="section" id="actualites">
+            <div class="conteneur">
+                <h2>Les actualités</h2>
+                <p class="texte-large">De la plus récente à la plus ancienne. Pour chacune, j'explique ce qu'elle change pour un administrateur système.</p>
+
+                <article class="actualite">
+                    <p class="actualite-date"><time datetime="2026-10-28">28/10/2026</time></p>
+                    <div class="actualite-contenu">
+                        <p class="etiquette">Presse spécialisée : Le Monde Informatique</p>
+                        <h3>OpenAI met ses agents IA hors ligne après plusieurs sorties de leur environnement</h3>
+                        <p>OpenAI a coupé l'accès direct à Internet de ses agents IA, après plusieurs cas où ils sont sortis de leur environnement de test.</p>
+                        <p>Ce que j'en retiens : un environnement de test doit être vraiment isolé du reste du réseau. Pour un administrateur, cela veut dire filtrer les flux qui sortent de cet environnement et les superviser, pour repérer tout de suite une connexion anormale.</p>
+                        <p><a href="https://www.lemondeinformatique.fr/actualites/lire-sortie-d-environnement-openai-met-ses-agents-hors-ligne-apres-plusieurs-failles-de-confinement-100876.html" target="_blank" rel="noopener">Lire l'article sur Le Monde Informatique (nouvel onglet)</a></p>
+                    </div>
+                </article>
+
+                <article class="actualite">
+                    <p class="actualite-date"><time datetime="2026-10-22">22/10/2026</time></p>
+                    <div class="actualite-contenu">
+                        <p class="etiquette">Presse spécialisée : Le Monde Informatique</p>
+                        <h3>Deux failles critiques dans PHP, trouvées avec l'aide de l'IA</h3>
+                        <p>Deux failles critiques ont été découvertes dans PHP, le langage utilisé par une grande partie des sites web : CVE-2026-109618 et CVE-2026-109619, avec un score de gravité de 9,2 sur 10. Elles ont été trouvées avec l'aide de l'IA. Le CERT-FR a publié une alerte la veille (CERTFR-2026-ALE-014, du 21/10/2026).</p>
+                        <p>Ce que j'en retiens : l'IA permet de trouver des failles plus vite, donc il faut aussi corriger plus vite. Un administrateur doit savoir quels serveurs utilisent PHP grâce à l'inventaire du parc, suivre les alertes du CERT-FR et appliquer les correctifs dès leur sortie.</p>
+                        <p><a href="https://www.lemondeinformatique.fr/actualites/lire-deux-failles-critiques-dans-php-les-entreprises-sous-pression-100866.html" target="_blank" rel="noopener">Lire l'article sur Le Monde Informatique (nouvel onglet)</a></p>
+                    </div>
+                </article>
+
+                <article class="actualite">
+                    <p class="actualite-date"><time datetime="2026-09-01">01/09/2026</time></p>
+                    <div class="actualite-contenu">
+                        <p class="etiquette">Presse généraliste : 20 Minutes (dépêche AFP)</p>
+                        <h3>OpenAI lance Astra : une IA capable de pirater des systèmes protégés</h3>
+                        <p>OpenAI annonce le lancement prochain d'Astra, un modèle d'IA capable de trouver des failles inconnues et de les exploiter seul dans des systèmes bien protégés. C'est le premier modèle de l'entreprise à atteindre le niveau de risque le plus élevé de sa propre grille d'évaluation en cybersécurité. Il sera lancé avec un dispositif de surveillance qui peut interrompre ses actions. Ses capacités les plus sensibles seront réservées à un petit groupe de testeurs, puis aux organisations qui protègent des infrastructures critiques.</p>
+                        <p>Ce que j'en retiens : cette actualité montre qu'une IA peut agir seule sur des systèmes informatiques. Les administrateurs systèmes sont directement concernés, puisque ce sont eux qui surveillent et protègent ces systèmes.</p>
+                        <p><a href="https://www.20min.ch/fr/story/intelligence-artificielle-une-ia-capable-de-pirater-seule-des-systemes-proteges-sera-lancee-103626042" target="_blank" rel="noopener">Lire l'article sur 20min.ch (nouvel onglet)</a></p>
+                    </div>
+                </article>
+
+                <p class="texte-secondaire">Ma veille continue : j'ajoute au moins une actualité par mois, jusqu'en février 2027.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Pied de page (identique sur toutes les pages) ===== -->
+    <footer class="pied">
+        <div class="conteneur">
+            <ul class="pied-liens">
+                <li><a href="mailto:rezzaouimehdi@hotmail.com">rezzaouimehdi@hotmail.com</a></li>
+                <li><a href="docs/CV_Mehdi_REZZAOUI.pdf">Télécharger mon CV (PDF)</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+            <p>Mehdi REZZAOUI, portfolio BTS SIO SISR, 2026-2027</p>
+        </div>
+    </footer>
+
+    <!-- Bouton "Retour en haut" : simple lien vers l'en-tête -->
+    <a href="#haut" class="retour-haut" aria-label="Retour en haut de la page">↑</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
