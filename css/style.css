@@ -643,6 +643,26 @@ code {
 }
 
 
+/* ---------- Logo de l'établissement (accueil) ---------- */
+
+.etablissement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.etablissement p {
+    margin: 0;
+}
+
+.logo-etablissement {
+    width: 5.5rem;
+    height: auto;
+    border-radius: 14px;
+}
+
+
 /* ---------- Pied de page ---------- */
 
 .pied {
