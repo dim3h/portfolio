@@ -1,0 +1,9 @@
+# Documents de travail : jamais publiés sur GitHub
+sources/
+
+# Fichier d'instructions pour l'assistant (contient des consignes internes)
+CLAUDE.md
+
+# Fichiers système
+.DS_Store
+Thumbs.db
