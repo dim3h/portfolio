@@ -1,0 +1,5 @@
+# tous les robots peuvent visiter le site
+User-agent: *
+Allow: /
+
+Sitemap: https://dim3h.github.io/portfolio/sitemap.xml
